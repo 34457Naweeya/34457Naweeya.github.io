@@ -4,7 +4,7 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<title>My Portfolio</title>
+<title>My Portfolio | นวียา แดงเนียม</title>
 
 <link href="https://fonts.googleapis.com/css2?family=Kanit:wght@300;400;500;600&family=Playfair+Display:wght@500;600;700&display=swap" rel="stylesheet">
 
@@ -18,14 +18,14 @@
 
 body{
     min-height:100vh;
-    font-family:'Kanit', sans-serif;
-    color:#4b356b;
+    font-family:'Kanit',sans-serif;
+    color:#51376b;
     overflow-x:hidden;
 
     background:
-        radial-gradient(circle at 20% 20%, #ffffff 0%, transparent 18%),
-        radial-gradient(circle at 80% 10%, #f7eaff 0%, transparent 25%),
-        linear-gradient(135deg,#eee0ff,#d8bff5,#c8a4e8,#eadcff);
+    radial-gradient(circle at 15% 15%,#ffffff 0%,transparent 18%),
+    radial-gradient(circle at 85% 10%,#f7eaff 0%,transparent 25%),
+    linear-gradient(135deg,#eee0ff,#d7bdf3,#c8a5e8,#eadcff);
 }
 
 /* ดาว */
@@ -33,20 +33,17 @@ body{
 .star{
     position:fixed;
     color:white;
-    font-size:20px;
-    opacity:.8;
-    animation:twinkle 2.5s infinite alternate;
+    font-size:22px;
     z-index:0;
+    animation:twinkle 2.5s infinite alternate;
 }
 
-.star:nth-child(1){top:8%;left:8%;}
-.star:nth-child(2){top:17%;left:90%;animation-delay:.5s;}
-.star:nth-child(3){top:35%;left:4%;animation-delay:1s;}
-.star:nth-child(4){top:45%;right:7%;animation-delay:1.5s;}
-.star:nth-child(5){top:70%;left:10%;animation-delay:.8s;}
-.star:nth-child(6){top:80%;right:12%;animation-delay:1.2s;}
-.star:nth-child(7){top:25%;left:50%;font-size:14px;}
-.star:nth-child(8){top:65%;left:48%;font-size:15px;}
+.s1{top:8%;left:7%}
+.s2{top:18%;right:10%}
+.s3{top:38%;left:4%}
+.s4{top:48%;right:6%}
+.s5{bottom:20%;left:10%}
+.s6{bottom:12%;right:12%}
 
 @keyframes twinkle{
     from{
@@ -65,169 +62,190 @@ body{
     position:fixed;
     top:35px;
     right:45px;
-    width:85px;
-    height:85px;
+
+    width:80px;
+    height:80px;
+
     border-radius:50%;
-    background:#fff8ff;
+
+    background:#fffaff;
+
     box-shadow:
-        0 0 25px #fff,
-        0 0 60px rgba(255,255,255,.7);
+    0 0 25px white,
+    0 0 60px rgba(255,255,255,.7);
+
     z-index:0;
 }
 
 .moon:after{
     content:"";
+
     position:absolute;
-    top:-8px;
-    left:18px;
-    width:80px;
-    height:80px;
+
+    width:75px;
+    height:75px;
+
     border-radius:50%;
-    background:#d8bff5;
+
+    background:#d7bdf3;
+
+    top:-7px;
+    left:18px;
 }
 
-/* กลีบดอกไม้ */
-
-.flower{
-    position:fixed;
-    font-size:45px;
-    opacity:.45;
-    z-index:0;
-}
-
-.flower.left{
-    bottom:20px;
-    left:20px;
-}
-
-.flower.right{
-    bottom:15px;
-    right:25px;
-}
-
-/* หน้าหลัก */
+/* กล่องหลัก */
 
 .container{
     position:relative;
     z-index:2;
+
     width:92%;
     max-width:1100px;
+
     margin:auto;
-    padding:55px 20px 70px;
+
+    padding:50px 0 70px;
 }
 
-/* กรอบแฟรี่เทล */
+.magic-box{
+    background:rgba(255,255,255,.25);
 
-.magic-frame{
+    backdrop-filter:blur(15px);
+
     border:2px solid rgba(255,255,255,.75);
+
     border-radius:35px;
-    padding:35px;
-    background:rgba(255,255,255,.20);
-    backdrop-filter:blur(12px);
+
+    padding:40px;
+
     box-shadow:
-        0 20px 60px rgba(90,50,130,.20),
-        inset 0 0 30px rgba(255,255,255,.25);
+    0 20px 60px rgba(80,45,120,.2),
+    inset 0 0 30px rgba(255,255,255,.3);
 }
 
 /* หัวข้อ */
 
-.top-title{
-    text-align:center;
-    margin-bottom:35px;
-}
-
 .small-title{
-    font-size:17px;
+    text-align:center;
+
+    font-size:16px;
+
     letter-spacing:5px;
-    color:#80609d;
+
+    color:#80629a;
+
     margin-bottom:5px;
 }
 
 h1{
+    text-align:center;
+
     font-family:'Playfair Display',serif;
+
     font-size:65px;
+
     letter-spacing:4px;
+
     color:#67458c;
+
     text-shadow:
-        2px 2px 0 #fff,
-        0 0 20px rgba(255,255,255,.8);
+    2px 2px white,
+    0 0 20px rgba(255,255,255,.8);
 }
 
 .subtitle{
-    font-size:18px;
+    text-align:center;
+
     color:#76568f;
+
+    font-size:18px;
+
     margin-top:5px;
 }
 
-/* รูปโปรไฟล์ */
+/* รูป */
 
 .profile-area{
     display:flex;
     justify-content:center;
-    margin:20px 0 35px;
+
+    margin:30px 0 20px;
 }
 
 .profile{
     width:190px;
     height:190px;
-    border-radius:50%;
+
     object-fit:cover;
 
-    border:7px solid rgba(255,255,255,.85);
+    border-radius:50%;
+
+    border:7px solid white;
 
     box-shadow:
-        0 0 0 5px #c9a9e8,
-        0 0 35px rgba(255,255,255,.9),
-        0 15px 35px rgba(85,50,120,.25);
+    0 0 0 5px #c9a9e8,
+    0 0 35px rgba(255,255,255,.9),
+    0 15px 35px rgba(85,50,120,.25);
 }
 
 /* ชื่อ */
 
 .name{
     text-align:center;
+
     margin-bottom:40px;
 }
 
 .name h2{
     font-size:30px;
-    color:#553573;
+
     font-weight:500;
+
+    color:#553573;
 }
 
 .name p{
     color:#795c91;
+
     font-size:16px;
+}
+
+/* เมนู */
+
+.menu{
+    display:grid;
+
+    grid-template-columns:repeat(2,1fr);
+
+    gap:25px;
 }
 
 /* การ์ด */
 
-.menu{
-    display:grid;
-    grid-template-columns:repeat(2,1fr);
-    gap:25px;
-}
-
 .card{
     position:relative;
+
     min-height:190px;
+
     padding:25px;
 
     text-decoration:none;
+
     color:#4d3765;
 
     background:
-        linear-gradient(
-            135deg,
-            rgba(255,255,255,.82),
-            rgba(246,232,255,.65)
-        );
+    linear-gradient(
+        135deg,
+        rgba(255,255,255,.85),
+        rgba(246,232,255,.65)
+    );
 
-    border:1px solid rgba(255,255,255,.9);
+    border:1px solid rgba(255,255,255,.95);
+
     border-radius:25px;
 
     box-shadow:
-        0 12px 30px rgba(91,55,125,.15),
-        inset 0 0 20px rgba(255,255,255,.5);
+    0 12px 30px rgba(91,55,125,.15);
 
     overflow:hidden;
 
@@ -235,86 +253,95 @@ h1{
 }
 
 .card:hover{
-    transform:translateY(-8px) scale(1.02);
+    transform:translateY(-8px);
 
     box-shadow:
-        0 20px 45px rgba(88,51,125,.25),
-        0 0 25px rgba(255,255,255,.8);
+    0 20px 45px rgba(88,51,125,.25),
+    0 0 25px rgba(255,255,255,.8);
 }
-
-/* ตกแต่งมุมการ์ด */
 
 .card:before{
     content:"✦";
+
     position:absolute;
+
     top:12px;
     right:18px;
+
     font-size:20px;
+
     color:#b28ad4;
 }
 
-.card:after{
-    content:"";
-    position:absolute;
-    width:90px;
-    height:90px;
-    border-radius:50%;
-    background:rgba(255,255,255,.35);
-    right:-35px;
-    bottom:-35px;
-}
+/* ไอคอน */
 
 .icon{
     width:60px;
     height:60px;
-    border-radius:18px;
 
     display:flex;
+
     align-items:center;
     justify-content:center;
 
+    border-radius:18px;
+
     font-size:28px;
 
-    background:linear-gradient(135deg,#e7d2fa,#c7a3e7);
-    box-shadow:0 7px 15px rgba(105,65,145,.15);
+    background:
+    linear-gradient(
+        135deg,
+        #e7d2fa,
+        #c7a3e7
+    );
+
+    box-shadow:
+    0 7px 15px rgba(105,65,145,.15);
 
     margin-bottom:15px;
 }
 
 .card h3{
     font-size:23px;
+
     color:#64427f;
+
     margin-bottom:6px;
 }
 
 .card p{
     font-size:14px;
-    color:#806b91;
-}
 
-/* ปุ่มเล็ก */
+    color:#806b91;
+
+    line-height:1.7;
+}
 
 .enter{
     display:inline-block;
-    margin-top:15px;
+
+    margin-top:12px;
+
     padding:7px 17px;
 
     border-radius:20px;
 
     background:#a77bc9;
+
     color:white;
 
     font-size:13px;
-
-    box-shadow:0 5px 12px rgba(108,70,145,.2);
 }
 
-/* ล่างสุด */
+/* ด้านล่าง */
 
 .footer{
     text-align:center;
+
     margin-top:35px;
+
     color:#806697;
+
     font-size:14px;
 }
 
@@ -327,26 +354,28 @@ h1{
 @media(max-width:700px){
 
     .container{
-        padding:25px 12px 50px;
+        padding:25px 0 50px;
     }
 
-    .magic-frame{
-        padding:22px 15px;
-        border-radius:25px;
+    .magic-box{
+        padding:25px 15px;
+
+        border-radius:28px;
     }
 
     h1{
-        font-size:42px;
+        font-size:43px;
     }
 
     .small-title{
         font-size:13px;
+
         letter-spacing:3px;
     }
 
     .profile{
-        width:150px;
-        height:150px;
+        width:155px;
+        height:155px;
     }
 
     .name h2{
@@ -355,23 +384,26 @@ h1{
 
     .menu{
         grid-template-columns:1fr;
+
         gap:18px;
     }
 
     .card{
-        min-height:165px;
+        min-height:170px;
     }
 
     .moon{
         width:55px;
         height:55px;
-        right:20px;
+
         top:20px;
+        right:20px;
     }
 
     .moon:after{
         width:55px;
         height:55px;
+
         left:12px;
         top:-5px;
     }
@@ -383,158 +415,160 @@ h1{
 <body>
 
 <!-- ดาว -->
-<div class="star">✦</div>
-<div class="star">✧</div>
-<div class="star">✦</div>
-<div class="star">✧</div>
-<div class="star">✦</div>
-<div class="star">✧</div>
-<div class="star">⋆</div>
-<div class="star">✦</div>
+
+<div class="star s1">✦</div>
+<div class="star s2">✧</div>
+<div class="star s3">✦</div>
+<div class="star s4">✧</div>
+<div class="star s5">✦</div>
+<div class="star s6">✧</div>
 
 <!-- พระจันทร์ -->
-<div class="moon"></div>
 
-<!-- ดอกไม้ -->
-<div class="flower left">🌸</div>
-<div class="flower right">🌷</div>
+<div class="moon"></div>
 
 
 <div class="container">
 
-    <div class="magic-frame">
+<div class="magic-box">
 
-        <!-- หัวข้อ -->
-        <div class="top-title">
+<!-- หัวข้อ -->
 
-            <div class="small-title">
-                WELCOME TO MY
-            </div>
+<div class="small-title">
+WELCOME TO MY
+</div>
 
-            <h1>PORTFOLIO</h1>
+<h1>PORTFOLIO</h1>
 
-            <div class="subtitle">
-                ✦ Naweeya Dangniem ✦
-            </div>
-
-        </div>
+<div class="subtitle">
+✦ My Little Fairy Tale ✦
+</div>
 
 
-        <!-- รูป -->
-        <div class="profile-area">
+<!-- รูปตัวเอง -->
 
-            <!-- เปลี่ยน profile.jpg เป็นรูปของตัวเอง -->
-            <img
-                src="profile.jpg"
-                class="profile"
-                alt="Profile"
-            >
+<div class="profile-area">
 
-        </div>
+<img
+src="profile.jpg"
+class="profile"
+alt="รูปโปรไฟล์"
+>
 
-
-        <!-- ชื่อ -->
-        <div class="name">
-
-            <h2>นวียา แดงเนียม</h2>
-
-            <p>
-                นักเรียนชั้นมัธยมศึกษาปีที่ 6
-            </p>
-
-        </div>
+</div>
 
 
-        <!-- เมนู -->
-        <div class="menu">
+<!-- ชื่อ -->
 
-            <!-- คำนำ -->
-            <a href="preface.html" class="card">
+<div class="name">
 
-                <div class="icon">
-                    📖
-                </div>
+<h2>นวียา แดงเนียม</h2>
 
-                <h3>คำนำ</h3>
+<p>
+นักเรียนชั้นมัธยมศึกษาปีที่ 6
+</p>
 
-                <p>
-                    ความตั้งใจและจุดประสงค์ในการจัดทำแฟ้มสะสมผลงาน
-                </p>
-
-                <span class="enter">
-                    เปิดดู →
-                </span>
-
-            </a>
+</div>
 
 
-            <!-- การศึกษา -->
-            <a href="education.html" class="card">
+<!-- เมนู -->
 
-                <div class="icon">
-                    🎓
-                </div>
-
-                <h3>ประวัติการศึกษา</h3>
-
-                <p>
-                    เส้นทางการศึกษาและประสบการณ์ที่ผ่านมา
-                </p>
-
-                <span class="enter">
-                    เปิดดู →
-                </span>
-
-            </a>
+<div class="menu">
 
 
-            <!-- มหาวิทยาลัย -->
-            <a href="future.html" class="card">
+<!-- คำนำ -->
 
-                <div class="icon">
-                    🏰
-                </div>
+<a href="portfolio.html" class="card">
 
-                <h3>อยากเข้าศึกษาต่อที่ไหน</h3>
+<div class="icon">
+📖
+</div>
 
-                <p>
-                    มหาวิทยาลัย คณะที่สนใจ และเป้าหมายในอนาคต
-                </p>
+<h3>คำนำ</h3>
 
-                <span class="enter">
-                    เปิดดู →
-                </span>
+<p>
+ความตั้งใจและจุดประสงค์ในการจัดทำแฟ้มสะสมผลงาน
+</p>
 
-            </a>
+<span class="enter">
+เปิดดู →
+</span>
 
-
-            <!-- ผลงาน -->
-            <a href="proud.html" class="card">
-
-                <div class="icon">
-                    🦋
-                </div>
-
-                <h3>ผลงานที่ภูมิใจ</h3>
-
-                <p>
-                    ผลงาน กิจกรรม และสิ่งที่ตั้งใจสร้างสรรค์
-                </p>
-
-                <span class="enter">
-                    เปิดดู →
-                </span>
-
-            </a>
-
-        </div>
+</a>
 
 
-        <div class="footer">
-            ✦ Made with <span>♡</span> and a little magic ✦
-        </div>
+<!-- ประวัติการศึกษา -->
 
-    </div>
+<a href="education.html" class="card">
+
+<div class="icon">
+🎓
+</div>
+
+<h3>ประวัติการศึกษา</h3>
+
+<p>
+เส้นทางการศึกษาและประสบการณ์ที่ผ่านมา
+</p>
+
+<span class="enter">
+เปิดดู →
+</span>
+
+</a>
+
+
+<!-- เป้าหมาย -->
+
+<a href="future.html" class="card">
+
+<div class="icon">
+🏰
+</div>
+
+<h3>อยากเข้าศึกษาต่อที่ไหน</h3>
+
+<p>
+มหาวิทยาลัย คณะที่สนใจ และเป้าหมายในอนาคต
+</p>
+
+<span class="enter">
+เปิดดู →
+</span>
+
+</a>
+
+
+<!-- ผลงาน -->
+
+<a href="proud.html" class="card">
+
+<div class="icon">
+🦋
+</div>
+
+<h3>ผลงานที่ภูมิใจ</h3>
+
+<p>
+ผลงาน กิจกรรม และโครงงานที่ตั้งใจสร้างสรรค์
+</p>
+
+<span class="enter">
+เปิดดู →
+</span>
+
+</a>
+
+</div>
+
+
+<div class="footer">
+
+✦ Made with <span>♡</span> and a little magic ✦
+
+</div>
+
+</div>
 
 </div>
 
