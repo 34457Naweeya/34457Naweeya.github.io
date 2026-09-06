@@ -1,335 +1,299 @@
 <!DOCTYPE html>
 <html lang="th">
 <head>
-<meta charset="UTF-8">
-<meta viewport="width=device-width, initial-scale=1.0">
-<title>แฟ้มสะสมงานของฉัน  </title>
-<style>
-body { font-family: sans-serif; background-color: #f4f7f6; text-align: center;
-padding: 30px; }
-.container { max-width: 800px; margin: 0 auto; }
-.project-card { background: white; padding: 20px; margin: 20px 0; border-radius:
-8px; box-shadow: 0 2px 5px rgba(0,0,0,0.1); text-align: left; }
-.btn { display: inline-block; background: #2c3e50; color: white; padding: 10px
-20px; text-decoration: none; border-radius: 5px; margin-top: 20px; }
-</style>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Portfolio</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Kanit:wght@300;400;500;600&family=Playfair+Display:wght@500;600;700&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="style.css">
 </head>
+
 <body>
-<div class="container">
-<h1> แฟ้มสะสมงาน  (Portfolio)</h1>
-<p>นี่คือพื้นที่รวบรวมผลงานและกิจกรรมที่ภูมิใจค่ะ</p>
-<!-- กล่องผลงานชนที่ ้ิ 1 -->
-<div class="project-card">
-<h3>1. โครงงาน/ชิ้นงานวิทยาศาสตร์คคำนวณ  </h3>
-<p>รายละเอียดชิ้นงาน : เขียนอธิบายสั้นๆ ว่าทำาอะไร ได้เรียนรู้อะไรจากงานนี้บ้าง </p>
-</div>
-<!-- กล่องผลงานชนที่ ้ิ 2 -->
-<div class="project-card">
-<h3>2. กิจกรรม/เกียรติบัตรที่ได้รับ</h3>
-<p>รายละเอียดชิ้นงาน : เข้าร่วมการประกวด หรือกิจกรรมของโรงเรียน...</p>
-</div>
-<!-- ปุ่มกดกลับหน้าแรก -->
-<a href="index.html" class="btn"> กลับหน้าแรก</a>
-<!-- ================= หน้าคำนำ ================= -->
-<div class="portfolio-page" id="page1">
-<h1>คำนำ</h1>
 
-<!-- ================= คำนำ ================= -->
-<div class="portfolio-page" id="page1">
-
-<h1>คำนำ</h1>
+<header>
+    <h1>MY PORTFOLIO</h1>
+    <p>แฟ้มสะสมผลงาน</p>
+</header>
+
+<section class="hero">
+
+    <div class="profile-image">
+        <!-- ใส่รูปตัวเองตรงนี้ -->
+        <img src="images/profile.jpg" alt="รูปโปรไฟล์">
+    </div>
+
+    <div class="hero-text">
+        <h2>ชื่อ - นามสกุล</h2>
+        <h3>ชื่อเล่น</h3>
+        <p>Portfolio ของฉัน</p>
+    </div>
+
+</section>
+
+<section class="menu">
+
+    <a href="preface.html" class="card">
+        <div class="card-image">
+            <img src="images/preface.jpg" alt="คำนำ">
+        </div>
+        <h2>คำนำ</h2>
+        <p>Preface</p>
+    </a>
+
+    <a href="education.html" class="card">
+        <div class="card-image">
+            <img src="images/education.jpg" alt="ประวัติการศึกษา">
+        </div>
+        <h2>ประวัติการศึกษา</h2>
+        <p>Education</p>
+    </a>
+
+    <a href="future.html" class="card">
+        <div class="card-image">
+            <img src="images/future.jpg" alt="อยากเข้าศึกษาต่อ">
+        </div>
+        <h2>อยากเข้าศึกษาต่อที่ไหน</h2>
+        <p>My Future</p>
+    </a>
+
+    <a href="proud.html" class="card">
+        <div class="card-image">
+            <img src="images/proud.jpg" alt="ผลงานที่ภูมิใจ">
+        </div>
+        <h2>ผลงานที่ภูมิใจ</h2>
+        <p>My Proud Works</p>
+    </a>
+
+</section>
+
+<footer>
+    <p>© 2026 My Portfolio</p>
+</footer>
+
+</body>
+</html>
+<!DOCTYPE html>
+<html lang="th">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>คำนำ | My Portfolio</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Kanit:wght@300;400;500;600&family=Playfair+Display:wght@500;600;700&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+<header>
+    <h1>คำนำ</h1>
+    <p>Preface</p>
+</header>
+
+<main class="page">
+
+    <div class="large-image">
+        <img src="images/preface.jpg" alt="รูปคำนำ">
+    </div>
+
+    <div class="content-box">
+        <h2>คำนำ</h2>
+
+        <p>
+แฟ้มสะสมผลงาน (Portfolio) เล่มนี้ จัดทำขึ้นเพื่อรวบรวมประวัติส่วนตัว ประวัติการศึกษา ความรู้ ความสามารถ กิจกรรม และผลงานต่าง ๆ ที่ข้าพเจ้าได้ตั้งใจศึกษาและสร้างสรรค์ขึ้นตลอดช่วงระยะเวลาที่ผ่านมา โดยมีจุดประสงค์เพื่อแสดงให้เห็นถึงความตั้งใจ ความพยายาม และพัฒนาการของข้าพเจ้าในด้านต่าง ๆ
+ข้าพเจ้าหวังเป็นอย่างยิ่งว่าแฟ้มสะสมผลงานเล่มนี้จะช่วยสะท้อนตัวตน ความสนใจ ความสามารถ และเป้าหมายในการศึกษาต่อของข้าพเจ้า รวมถึงเป็นส่วนหนึ่งในการประกอบการพิจารณาเข้าศึกษาต่อในระดับอุดมศึกษา
+ขอขอบพระคุณคุณครู ผู้ปกครอง และทุกคนที่ให้คำแนะนำ สนับสนุน และเป็นกำลังใจให้ข้าพเจ้าตลอดมา จนทำให้แฟ้มสะสมผลงานเล่มนี้สำเร็จลุล่วงไปได้ด้วยดี
+        </p>
+
+        <p>
+            นวียา แดงเนียม
+        </p>
+    </div>
 
-<p>
-แฟ้มสะสมผลงานเล่มนี้จัดทำขึ้นเพื่อรวบรวมประวัติส่วนตัว
-ประวัติการศึกษา ความสามารถ กิจกรรม โครงงาน ชิ้นงาน
-และผลงานต่าง ๆ ที่ข้าพเจ้าได้ทำตลอดระยะเวลาที่ผ่านมา
-</p>
+    <a href="index.html" class="back">← กลับหน้าหลัก</a>
 
-<p>
-การจัดทำแฟ้มสะสมผลงานนี้มีจุดประสงค์เพื่อแสดงให้เห็นถึง
-ความตั้งใจ ความสามารถ ความรับผิดชอบ และประสบการณ์
-ของข้าพเจ้า รวมถึงเป็นแนวทางในการศึกษาต่อในระดับมหาวิทยาลัย
-</p>
+</main>
 
-<p>
-ข้าพเจ้าหวังเป็นอย่างยิ่งว่าแฟ้มสะสมผลงานเล่มนี้
-จะช่วยให้ผู้อ่านได้รู้จักตัวตน ความสามารถ
-และเป้าหมายของข้าพเจ้ามากยิ่งขึ้น
-</p>
+</body>
+</html>
+<!DOCTYPE html>
+<html lang="th">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ประวัติการศึกษา | My Portfolio</title>
 
-<p style="text-align:right;">
-จัดทำโดย<br>
-นวียา แดงเนียม
-</p>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Kanit:wght@300;400;500;600&family=Playfair+Display:wght@500;600;700&display=swap" rel="stylesheet">
 
-<div class="page-buttons">
-<button onclick="nextPage(2)">หน้าถัดไป →</button>
-</div>
+    <link rel="stylesheet" href="style.css">
+</head>
 
-</div>
+<body>
 
+<header>
+    <h1>ประวัติการศึกษา</h1>
+    <p>Education</p>
+</header>
 
-<!-- ================= แนะนำตัว ================= -->
-<div class="portfolio-page" id="page2" style="display:none;">
+<main class="page">
 
-<h1>แนะนำตัว</h1>
+    <div class="large-image">
+        <img src="images/education.jpg" alt="ประวัติการศึกษา">
+    </div>
 
-<div class="profile-box">
+    <div class="content-box">
 
-<img src="profile.jpg" width="250" alt="รูปของฉัน">
+        <h2>ประวัติการศึกษา</h2>
 
-<h2>นวียา แดงเนียม</h2>
+        <div class="education-item">
+            <h3>ระดับประถมศึกษา</h3>
+            <p>ชื่อโรงเรียน :โรงเรียนวัฒนดรุณวิทย์</p>
+            <p>ปีการศึกษา : 2563</p>
+        </div>
 
-<p><b>ชื่อเล่น :</b> เหนือ</p>
-<p><b>วันเกิด :</b> 21 เมษายน 2552</p>
-<p><b>ระดับการศึกษา :</b> มัธยมศึกษาปีที่ 6</p>
-<p><b>โรงเรียน :</b> บ้านบึงอุตสาหกรรมนุเคราะห์ </p>
+        <div class="education-item">
+            <h3>ระดับมัธยมศึกษาตอนต้น</h3>
+            <p>ชื่อโรงเรียน : โรงเรียนบ้านบึงอุตสาหกรรมนุเคราะห์</p>
+            <p>ปีการศึกษา : 2563</p>
+        </div>
 
-<h2>เกี่ยวกับฉัน</h2>
+        <div class="education-item">
+            <h3>ระดับมัธยมศึกษาตอนปลาย</h3>
+            <p>ชื่อโรงเรียน : โรงเรียนบ้านบึงอุตสาหกรรมนุเคราะห์</p>
+            <p>แผนการเรียน : วิทย์-คณิต ( เตรียมวิศวะ )</p>
+            <p>ปีการศึกษา : 2569 </p>
+        </div>
 
-<p>
-เป็นคนที่มีความตั้งใจในการเรียน ชอบเรียนรู้สิ่งใหม่ ๆ
-และสนใจด้านวิทยาศาสตร์ เทคโนโลยี และการออกแบบ
-พร้อมพัฒนาตนเองและเรียนรู้จากประสบการณ์ต่าง ๆ
-</p>
+    </div>
 
-</div>
+    <a href="index.html" class="back">← กลับหน้าหลัก</a>
 
-<div class="page-buttons">
-<button onclick="nextPage(1)">← ย้อนกลับ</button>
-<button onclick="nextPage(3)">หน้าถัดไป →</button>
-</div>
+</main>
 
-</div>
+</body>
+</html>
+<!DOCTYPE html>
+<html lang="th">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>อยากเข้าศึกษาต่อ | My Portfolio</title>
 
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Kanit:wght@300;400;500;600&family=Playfair+Display:wght@500;600;700&display=swap" rel="stylesheet">
 
-<!-- ================= รายละเอียดการศึกษา ================= -->
-<div class="portfolio-page" id="page3" style="display:none;">
+    <link rel="stylesheet" href="style.css">
+</head>
 
-<h1>รายละเอียดการศึกษา</h1>
+<body>
 
-<h2>ประวัติการศึกษา</h2>
+<header>
+    <h1>อยากเข้าศึกษาต่อที่ไหน</h1>
+    <p>My Future</p>
+</header>
 
-<p>
-ประถมศึกษาตอนต้น โรงเรียนวัฒนดรุณวิทย์
-ประถมศึกษาตอนปลาย โรงเรียนวัฒนดรุณวิทย์
-มัธยมศึกษาตอนต้น โรงเรียนบ้านบึงอุตสาหกรรมนุเคราะห์  
-ปัจจุบันกำลังศึกษาอยู่ในโรงเรียนบ้านบึงอุตสาหกรรมนุเคราะห์ ระดับชั้นมัธยมศึกษาปีที่ 6
-ห้องเรียน วิทย์คณิต เตรียมวิศวกรรมศาตร์
-</p>
+<main class="page">
 
-<h2>วิชาที่สนใจ</h2>
+    <div class="large-image">
+        <img src="images/future.jpg" alt="มหาวิทยาลัยที่อยากเข้า">
+    </div>
 
-<p>• วิทยาศาสตร์</p>
-<p>• คณิตศาสตร์</p>
-<p>• ภาษาอังกฤษ</p>
-<p>• เทคโนโลยี</p>
+    <div class="content-box">
 
-<h2>ทักษะและความสามารถ</h2>
+        <h2>มหาวิทยาลัยที่อยากเข้าศึกษาต่อ</h2>
 
-<p>• สามารถใช้คอมพิวเตอร์และโปรแกรมพื้นฐานได้</p>
-<p>• มีความคิดสร้างสรรค์</p>
-<p>• สามารถทำงานร่วมกับผู้อื่นได้</p>
-<p>• มีความรับผิดชอบ</p>
-<p>• พร้อมเรียนรู้สิ่งใหม่ ๆ</p>
+        <h3>มหาวิทยาลัย : สถาบันเทคโนโลยีพระจอมเกล้าเจ้าคุณทหารลาดกระบัง</h3>
 
-<div class="page-buttons">
-<button onclick="nextPage(2)">← ย้อนกลับ</button>
-<button onclick="nextPage(4)">หน้าถัดไป →</button>
-</div>
+        <p>
+            คณะที่ต้องการ : คณะวิศวกรรมศาสตร์
+        </p>
 
-</div>
+        <p>
+            สาขาที่ต้องการ : สาขาคอมพิวเตอร์
+        </p>
 
+        <h3>เหตุผลที่อยากเข้าศึกษาต่อ
+        หนูเป็นคนที่สนใจคอมพิวเตอร์และเทคโนโลยี เพราะรู้สึกว่าเป็นสิ่งที่อยู่ใกล้ตัวและมีความสำคัญมากในปัจจุบัน หนูอยากเรียนรู้ว่าคอมพิวเตอร์และโปรแกรมต่าง ๆ ทำงานอย่างไร และอยากลองสร้างสิ่งต่าง ๆ ขึ้นมาด้วยตัวเอง จึงทำให้หนูสนใจคณะวิศวกรรมศาสตร์ สาขาวิศวกรรมคอมพิวเตอร์
+หนูอยากเข้าศึกษาต่อที่สถาบันเทคโนโลยีพระจอมเกล้าเจ้าคุณทหารลาดกระบัง เพราะเป็นมหาวิทยาลัยที่มีชื่อเสียงด้านวิศวกรรมและเทคโนโลยี และมีสิ่งที่หนูสนใจ หนูคิดว่าที่นี่จะช่วยให้หนูได้พัฒนาความรู้และทักษะที่เกี่ยวกับคอมพิวเตอร์มากขึ้น รวมถึงได้เรียนรู้จากการลงมือทำจริง</h3>
 
-<!-- ================= มหาวิทยาลัยที่อยากเข้า ================= -->
-<div class="portfolio-page" id="page4" style="display:none;">
+        <p>
+            เป้าหมายในการเข้าศึกษาต่อ
+          เป้าหมายของหนูคือการตั้งใจเรียนและพัฒนาตัวเองให้มีความรู้ด้านวิศวกรรมคอมพิวเตอร์มากขึ้น อยากฝึกทั้งการเขียนโปรแกรม การสร้างเว็บไซต์ การพัฒนาซอฟต์แวร์ และการแก้ปัญหาต่าง ๆ ที่เกี่ยวกับคอมพิวเตอร์
+ในอนาคตหนูอยากนำความรู้ที่เรียนมาใช้สร้างผลงานที่สามารถนำไปใช้ได้จริง และพัฒนาตัวเองให้สามารถทำงานในสายคอมพิวเตอร์ได้อย่างที่ตั้งใจไว้
+        </p>
 
-<h1>มหาวิทยาลัยที่อยากเข้า</h1>
+    </div>
 
-<div class="university-box">
+    <a href="index.html" class="back">← กลับหน้าหลัก</a>
 
-<img src="university.jpg" width="300" alt="มหาวิทยาลัยที่อยากเข้า">
+</main>
 
-<h2>มหาวิทยาลัยที่ใฝ่ฝัน</h2>
+</body>
+</html>
+<!DOCTYPE html>
+<html lang="th">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ผลงานที่ภูมิใจ | My Portfolio</title>
 
-<p>
-<b>มหาวิทยาลัย :</b>
-สถาบันเทคโนโลยีพระจอมเกล้าเจ้าคุณทหารลาดกระบัง
-</p>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Kanit:wght@300;400;500;600&family=Playfair+Display:wght@500;600;700&display=swap" rel="stylesheet">
 
-<p>
-<b>คณะที่สนใจ :</b>
-คณะวิศวกรรมศาสตร์
-</p>
+    <link rel="stylesheet" href="style.css">
+</head>
 
-<p>
-<b>สาขาที่สนใจ :</b>
-สาขา คอมพิวเตอร์
-</p>
+<body>
 
-<h2>เหตุผลที่อยากเข้า</h2>
+<header>
+    <h1>ผลงานที่ภูมิใจ</h1>
+    <p>My Proud Works</p>
+</header>
 
-<p>
-เนื่องจากเป็นมหาวิทยาลัยที่มีหลักสูตรที่ตรงกับ
-ความสนใจและเป้าหมายในอนาคต อีกทั้งยังมีสภาพแวดล้อม
-และโอกาสในการพัฒนาความรู้และทักษะที่หลากหลาย
-</p>
+<main class="page">
 
-</div>
+    <div class="large-image">
+        <img src="images/proud.jpg" alt="ผลงาน">
+    </div>
 
-<div class="page-buttons">
-<button onclick="nextPage(3)">← ย้อนกลับ</button>
-<button onclick="nextPage(5)">หน้าถัดไป →</button>
-</div>
+    <div class="content-box">
 
-</div>
+        <h2>ผลงานที่ภูมิใจ</h2>
 
+        <div class="work">
+            <h3>ผลงานที่ 1</h3>
+            <p>ชื่อผลงาน : ........................................</p>
+            <p>รายละเอียด : ........................................</p>
+        </div>
 
-<!-- ================= ผลงานที่ภูมิใจ ================= -->
-<div class="portfolio-page" id="page5" style="display:none;">
+        <div class="work">
+            <h3>ผลงานที่ 2</h3>
+            <p>ชื่อผลงาน : ........................................</p>
+            <p>รายละเอียด : ........................................</p>
+        </div>
 
-<h1>ผลงานที่ภูมิใจ</h1>
+        <div class="work">
+            <h3>ผลงานที่ 3</h3>
+            <p>ชื่อผลงาน : ........................................</p>
+            <p>รายละเอียด : ........................................</p>
+        </div>
 
-<div class="project-box">
+    </div>
 
-<img src="work1.jpg" width="300" alt="ผลงานที่ 1">
+    <a href="index.html" class="back">← กลับหน้าหลัก</a>
 
-<h2>ผลงานที่ 1</h2>
+</main>
 
-<p>
-<b>ชื่อผลงาน :</b>
-................................................
-</p>
-
-<p>
-<b>รายละเอียด :</b>
-................................................
-</p>
-
-<p>
-<b>สิ่งที่ได้รับ :</b>
-ได้ฝึกความรับผิดชอบ การทำงานเป็นขั้นตอน
-และการแก้ไขปัญหา
-</p>
-
-</div>
-
-
-<div class="project-box">
-
-<img src="work2.jpg" width="300" alt="ผลงานที่ 2">
-
-<h2>ผลงานที่ 2</h2>
-
-<p>
-<b>ชื่อผลงาน :</b>
-................................................
-</p>
-
-<p>
-<b>รายละเอียด :</b>
-................................................
-</p>
-
-<p>
-<b>สิ่งที่ได้รับ :</b>
-ได้พัฒนาทักษะและเรียนรู้จากการลงมือทำจริง
-</p>
-
-</div>
-
-
-<div class="page-buttons">
-<button onclick="nextPage(4)">← ย้อนกลับ</button>
-</div>
-
-</div>
-
-
-<!-- ================= CSS ================= -->
-<style>
-
-.portfolio-page {
-min-height: 650px;
-padding: 50px;
-margin: 30px auto;
-max-width: 900px;
-box-sizing: border-box;
-background: white;
-border-radius: 20px;
-}
-
-.portfolio-page h1 {
-text-align: center;
-margin-bottom: 40px;
-}
-
-.portfolio-page h2 {
-margin-top: 25px;
-}
-
-.portfolio-page p {
-font-size: 18px;
-line-height: 1.8;
-}
-
-.profile-box,
-.university-box,
-.project-box {
-background: #f5f5f5;
-padding: 30px;
-margin: 25px 0;
-border-radius: 15px;
-text-align: center;
-}
-
-.profile-box img,
-.university-box img,
-.project-box img {
-max-width: 100%;
-height: auto;
-border-radius: 15px;
-}
-
-.page-buttons {
-text-align: center;
-margin-top: 50px;
-}
-
-.page-buttons button {
-padding: 12px 25px;
-margin: 5px;
-border: none;
-border-radius: 20px;
-cursor: pointer;
-font-size: 16px;
-}
-
-</style>
-
-
-<!-- ================= JavaScript ================= -->
-<script>
-
-function nextPage(pageNumber) {
-
-var pages = document.querySelectorAll(".portfolio-page");
-
-pages.forEach(function(page) {
-page.style.display = "none";
-});
-
-document.getElementById("page" + pageNumber).style.display = "block";
-
-window.scrollTo({
-top: 0,
-behavior: "smooth"
-});
-
-}
-
-</script>
-}
-</script>
-
-
+</body>
+</html>
