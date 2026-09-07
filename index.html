@@ -3,879 +3,242 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Naweeya Dangniem | Portfolio</title>
 
-<title>นวียา แดงเนียม | Portfolio</title>
+<link href="https://fonts.googleapis.com/css2?family=Itim&family=Mali:wght@400;500;600&display=swap" rel="stylesheet">
 
 <style>
-@import url('https://fonts.googleapis.com/css2?family=Itim&family=Mali:wght@400;500;600&display=swap');
+*{box-sizing:border-box}
 
-* {
-    box-sizing: border-box;
+body{
+    margin:0;
+    min-height:100vh;
+    font-family:'Mali',sans-serif;
+    color:#6b4b7d;
+    text-align:center;
+    background:linear-gradient(135deg,#eee3ff,#d9c4f7,#f4eaff,#dfcaf7,#f6edff);
+    background-size:300% 300%;
+    animation:bg 14s ease infinite;
 }
 
-html {
-    scroll-behavior: smooth;
+@keyframes bg{
+    0%,100%{background-position:0 50%}
+    50%{background-position:100% 50%}
 }
 
-body {
-    margin: 0;
-    min-height: 100vh;
-    overflow-x: hidden;
-
-    font-family: 'Mali', sans-serif;
-    color: #665276;
-
-    background:
-        radial-gradient(circle at 20% 10%, rgba(255,255,255,.95), transparent 20%),
-        radial-gradient(circle at 80% 20%, rgba(255,255,255,.75), transparent 22%),
-        radial-gradient(circle at 50% 80%, rgba(221,194,255,.45), transparent 30%),
-        linear-gradient(
-            135deg,
-            #eee3ff,
-            #d8c0f5,
-            #f7edff,
-            #dec8f7,
-            #f6ecff
-        );
+/* แถบด้านบน */
+.top-nav{
+    position:sticky;
+    top:12px;
+    z-index:100;
+    width:min(900px,92%);
+    margin:12px auto 25px;
+    padding:9px;
+    display:flex;
+    justify-content:center;
+    flex-wrap:wrap;
+    gap:6px;
+    background:rgba(255,255,255,.58);
+    border:1.5px solid rgba(255,255,255,.9);
+    border-radius:22px;
+    box-shadow:0 8px 25px rgba(120,80,150,.16);
+    backdrop-filter:blur(12px);
 }
 
-/* แสงฟุ้ง */
-body::before {
-    content: "";
-    position: fixed;
-    width: 550px;
-    height: 550px;
-    left: -180px;
-    top: 10%;
-
-    border-radius: 50%;
-    background: rgba(255,255,255,.3);
-    filter: blur(90px);
-
-    animation: cloudMove 10s ease-in-out infinite;
-    pointer-events: none;
+.top-nav a{
+    color:#6b4b7d;
+    text-decoration:none;
+    padding:9px 13px;
+    border-radius:16px;
+    font-size:13px;
+    transition:.25s;
 }
 
-body::after {
-    content: "";
-    position: fixed;
-    width: 500px;
-    height: 500px;
-    right: -180px;
-    bottom: 5%;
-
-    border-radius: 50%;
-    background: rgba(193,155,255,.2);
-    filter: blur(100px);
-
-    animation: cloudMove2 12s ease-in-out infinite;
-    pointer-events: none;
+.top-nav a:hover{
+    background:rgba(220,195,250,.7);
+    transform:translateY(-2px);
 }
 
-@keyframes cloudMove {
-    0%,100% {
-        transform: translate(0,0);
+.container{
+    width:min(900px,92%);
+    margin:auto;
+    padding-bottom:50px;
+}
+
+/* รูปโปรไฟล์ */
+.profile{
+    width:170px;
+    height:170px;
+    margin:25px auto 15px;
+    border-radius:50%;
+    padding:8px;
+    background:linear-gradient(135deg,#fff,#d8b9ff,#fff);
+    box-shadow:0 0 25px #c9a5ee,0 0 60px #fff;
+}
+
+.profile img{
+    width:100%;
+    height:100%;
+    border-radius:50%;
+    object-fit:cover;
+    border:5px solid rgba(255,255,255,.8);
+}
+
+h1{
+    font-family:'Itim',cursive;
+    font-size:46px;
+    color:#684477;
+    margin:10px 0 0;
+}
+
+.portfolio-title{
+    font:27px 'Itim';
+    color:#a178b5;
+}
+
+.subtitle{
+    margin:7px;
+    color:#80628d;
+}
+
+/* แนะนำตัว */
+.intro-card{
+    max-width:700px;
+    margin:25px auto;
+    padding:25px;
+    border-radius:30px;
+    background:rgba(255,255,255,.62);
+    border:1.5px solid rgba(255,255,255,.9);
+    box-shadow:0 12px 35px rgba(132,91,166,.18);
+    line-height:1.9;
+}
+
+.intro-title{
+    font:28px 'Itim';
+    color:#7b5291;
+}
+
+.intro-card b{
+    color:#704681;
+}
+
+/* เมนู */
+.menu{
+    display:grid;
+    grid-template-columns:repeat(2,1fr);
+    gap:18px;
+    max-width:700px;
+    margin:25px auto;
+}
+
+.card{
+    text-decoration:none;
+    color:#6b4b7d;
+    padding:22px 18px;
+    border-radius:25px;
+    background:rgba(255,255,255,.58);
+    border:1.5px solid rgba(255,255,255,.85);
+    box-shadow:0 10px 28px rgba(120,80,150,.15);
+    transition:.3s;
+}
+
+.card:hover{
+    transform:translateY(-6px);
+}
+
+.card .icon{
+    font-size:32px;
+}
+
+.card h2{
+    font:23px 'Itim';
+    margin:5px;
+}
+
+.card p{
+    font-size:13px;
+}
+
+/* ติดต่อ */
+.contact{
+    max-width:700px;
+    margin:auto;
+    padding:20px;
+    border-radius:25px;
+    background:rgba(255,255,255,.55);
+    border:1.5px solid rgba(255,255,255,.85);
+    box-shadow:0 10px 28px rgba(120,80,150,.14);
+    line-height:1.9;
+}
+
+.contact h2{
+    font:24px 'Itim';
+}
+
+.contact a{
+    color:#79518b;
+    text-decoration:none;
+}
+
+.thankyou{
+    padding:25px;
+    line-height:2;
+}
+
+.thankyou-title{
+    font:25px 'Itim';
+    color:#805490;
+}
+
+@media(max-width:600px){
+    .top-nav a{
+        font-size:11px;
+        padding:7px 9px;
     }
 
-    50% {
-        transform: translate(80px,30px);
-    }
-}
-
-@keyframes cloudMove2 {
-    0%,100% {
-        transform: translate(0,0);
+    .profile{
+        width:145px;
+        height:145px;
     }
 
-    50% {
-        transform: translate(-70px,-40px);
-    }
-}
-
-
-/* =========================
-   ดาววิ้งค์
-   ========================= */
-
-.sparkle {
-    position: fixed;
-    z-index: 1;
-
-    color: white;
-    pointer-events: none;
-
-    text-shadow:
-        0 0 5px white,
-        0 0 12px #d9baff,
-        0 0 22px #cda8ff;
-
-    animation:
-        twinkle 2.5s ease-in-out infinite,
-        floatStar 7s ease-in-out infinite;
-}
-
-.s1 { top: 7%; left: 8%; font-size: 22px; }
-.s2 { top: 13%; left: 28%; font-size: 13px; animation-delay: .4s; }
-.s3 { top: 20%; right: 10%; font-size: 25px; animation-delay: 1s; }
-.s4 { top: 34%; left: 4%; font-size: 15px; animation-delay: 1.5s; }
-.s5 { top: 42%; right: 6%; font-size: 23px; animation-delay: .7s; }
-.s6 { top: 58%; left: 9%; font-size: 14px; animation-delay: 1.8s; }
-.s7 { top: 68%; right: 12%; font-size: 20px; animation-delay: .2s; }
-.s8 { top: 78%; left: 5%; font-size: 25px; animation-delay: 1.2s; }
-.s9 { top: 88%; right: 8%; font-size: 14px; animation-delay: 2s; }
-.s10 { top: 92%; left: 35%; font-size: 19px; animation-delay: .6s; }
-
-@keyframes twinkle {
-    0%,100% {
-        opacity: .25;
-        transform: scale(.65) rotate(0deg);
+    h1{
+        font-size:37px;
     }
 
-    50% {
-        opacity: 1;
-        transform: scale(1.6) rotate(25deg);
-    }
-}
-
-@keyframes floatStar {
-    0%,100% {
-        margin-top: 0;
-    }
-
-    50% {
-        margin-top: -12px;
-    }
-}
-
-
-/* ดาวตกเล็ก ๆ */
-.mini-star {
-    position: fixed;
-    width: 4px;
-    height: 4px;
-
-    border-radius: 50%;
-    background: white;
-
-    box-shadow:
-        0 0 7px white,
-        0 0 15px #d7b7ff;
-
-    animation: miniFloat 6s ease-in-out infinite;
-
-    pointer-events: none;
-}
-
-.m1 { left: 18%; top: 30%; animation-delay: 0s; }
-.m2 { left: 75%; top: 35%; animation-delay: 1s; }
-.m3 { left: 45%; top: 12%; animation-delay: 2s; }
-.m4 { left: 88%; top: 65%; animation-delay: 3s; }
-.m5 { left: 25%; top: 82%; animation-delay: 1.5s; }
-.m6 { left: 60%; top: 75%; animation-delay: 2.5s; }
-
-@keyframes miniFloat {
-    0%,100% {
-        opacity: .2;
-        transform: translateY(0) scale(.7);
-    }
-
-    50% {
-        opacity: 1;
-        transform: translateY(-25px) scale(1.3);
-    }
-}
-
-
-/* =========================
-   ผีเสื้อ
-   ========================= */
-
-.butterfly {
-    position: fixed;
-    z-index: 1;
-
-    font-size: 27px;
-    opacity: .7;
-
-    pointer-events: none;
-
-    animation: butterflyFly 18s linear infinite;
-}
-
-.b1 {
-    top: 25%;
-    left: -60px;
-}
-
-.b2 {
-    top: 65%;
-    left: -80px;
-    animation-delay: 7s;
-}
-
-.b3 {
-    top: 45%;
-    left: -70px;
-    animation-delay: 12s;
-}
-
-@keyframes butterflyFly {
-
-    0% {
-        transform:
-            translateX(-80px)
-            translateY(0)
-            rotate(-10deg);
-    }
-
-    25% {
-        transform:
-            translateX(25vw)
-            translateY(-60px)
-            rotate(12deg);
-    }
-
-    50% {
-        transform:
-            translateX(55vw)
-            translateY(20px)
-            rotate(-8deg);
-    }
-
-    75% {
-        transform:
-            translateX(80vw)
-            translateY(-70px)
-            rotate(10deg);
-    }
-
-    100% {
-        transform:
-            translateX(115vw)
-            translateY(10px)
-            rotate(-5deg);
-    }
-}
-
-
-/* =========================
-   ดอกไม้ลอย
-   ========================= */
-
-.flower {
-    position: fixed;
-    z-index: 1;
-
-    color: rgba(255,255,255,.8);
-    font-size: 23px;
-
-    pointer-events: none;
-
-    animation: flowerFloat 8s ease-in-out infinite;
-}
-
-.f1 { left: 12%; top: 48%; }
-.f2 { right: 13%; top: 27%; animation-delay: 2s; }
-.f3 { left: 17%; bottom: 10%; animation-delay: 4s; }
-
-@keyframes flowerFloat {
-    0%,100% {
-        transform: translateY(0) rotate(0deg);
-        opacity: .4;
-    }
-
-    50% {
-        transform: translateY(-30px) rotate(20deg);
-        opacity: .9;
-    }
-}
-
-
-/* =========================
-   เนื้อหาหลัก
-   ========================= */
-
-.container {
-    position: relative;
-    z-index: 3;
-
-    width: min(92%, 850px);
-    margin: auto;
-
-    padding: 55px 0 35px;
-}
-
-
-/* โปรไฟล์ */
-
-.profile-section {
-    text-align: center;
-}
-
-.profile-frame {
-    width: 180px;
-    height: 180px;
-
-    margin: auto;
-    padding: 7px;
-
-    border-radius: 50%;
-
-    background:
-        linear-gradient(
-            135deg,
-            white,
-            #d8b8f7,
-            white,
-            #cda8f1
-        );
-
-    box-shadow:
-        0 0 20px white,
-        0 0 45px rgba(170,125,220,.45),
-        0 0 80px rgba(220,190,255,.4);
-
-    animation:
-        profileGlow 4s ease-in-out infinite,
-        profileFloat 5s ease-in-out infinite;
-}
-
-.profile-frame img {
-    width: 100%;
-    height: 100%;
-
-    object-fit: cover;
-
-    border-radius: 50%;
-}
-
-@keyframes profileGlow {
-
-    0%,100% {
-        box-shadow:
-            0 0 20px white,
-            0 0 40px rgba(170,125,220,.35);
-    }
-
-    50% {
-        box-shadow:
-            0 0 30px white,
-            0 0 65px rgba(170,125,220,.55);
-    }
-}
-
-@keyframes profileFloat {
-
-    0%,100% {
-        transform: translateY(0);
-    }
-
-    50% {
-        transform: translateY(-8px);
-    }
-}
-
-
-/* ชื่อ */
-
-.name {
-    margin-top: 22px;
-
-    font-family: 'Itim', cursive;
-    font-size: 43px;
-
-    color: #76539c;
-
-    text-shadow:
-        0 2px 8px white,
-        0 0 20px rgba(255,255,255,.8);
-}
-
-.portfolio {
-    margin-top: 4px;
-
-    font-size: 24px;
-    color: #9272b7;
-
-    text-shadow:
-        0 0 12px rgba(255,255,255,.8);
-}
-
-.subtitle {
-    margin-top: 5px;
-
-    font-size: 16px;
-    color: #79668b;
-}
-
-
-/* =========================
-   แนะนำตัว
-   ========================= */
-
-.intro-card {
-    position: relative;
-
-    width: min(90%, 700px);
-
-    margin: 30px auto 38px;
-    padding: 28px 30px;
-
-    border-radius: 30px;
-
-    background:
-        linear-gradient(
-            135deg,
-            rgba(255,255,255,.58),
-            rgba(239,220,255,.4)
-        );
-
-    border: 1px solid rgba(255,255,255,.85);
-
-    box-shadow:
-        0 12px 35px rgba(116,82,155,.15),
-        0 0 25px rgba(255,255,255,.5);
-
-    backdrop-filter: blur(15px);
-
-    text-align: center;
-
-    animation: introFloat 5s ease-in-out infinite;
-
-    overflow: hidden;
-}
-
-
-/* แสงวิ่งผ่านกรอบ */
-
-.intro-card::before {
-    content: "";
-
-    position: absolute;
-
-    top: -50%;
-    left: -70%;
-
-    width: 45%;
-    height: 200%;
-
-    background:
-        linear-gradient(
-            90deg,
-            transparent,
-            rgba(255,255,255,.7),
-            transparent
-        );
-
-    transform: rotate(20deg);
-
-    animation: shine 5s infinite;
-}
-
-@keyframes shine {
-
-    0% {
-        left: -70%;
-    }
-
-    45%,100% {
-        left: 130%;
-    }
-}
-
-@keyframes introFloat {
-
-    0%,100% {
-        transform: translateY(0);
-    }
-
-    50% {
-        transform: translateY(-7px);
-    }
-}
-
-.intro-title {
-    position: relative;
-    z-index: 2;
-
-    font-family: 'Itim', cursive;
-
-    font-size: 30px;
-
-    color: #76539c;
-
-    margin-bottom: 14px;
-
-    text-shadow:
-        0 0 8px white,
-        0 0 15px rgba(202,164,242,.7);
-}
-
-.intro-card p {
-    position: relative;
-    z-index: 2;
-
-    max-width: 650px;
-
-    margin: 9px auto;
-
-    line-height: 1.9;
-
-    font-size: 16px;
-
-    color: #69577c;
-}
-
-.intro-card b {
-    color: #76539c;
-}
-
-
-/* =========================
-   เมนู
-   ========================= */
-
-.menu {
-    margin-top: 20px;
-
-    display: grid;
-
-    grid-template-columns: repeat(2, 1fr);
-
-    gap: 18px;
-}
-
-.menu a {
-    position: relative;
-
-    text-decoration: none;
-
-    color: #6d5385;
-
-    padding: 23px 15px;
-
-    border-radius: 26px;
-
-    background:
-        linear-gradient(
-            135deg,
-            rgba(255,255,255,.52),
-            rgba(246,232,255,.38)
-        );
-
-    border: 1px solid rgba(255,255,255,.8);
-
-    box-shadow:
-        0 10px 30px rgba(113,83,145,.12),
-        0 0 20px rgba(255,255,255,.25);
-
-    backdrop-filter: blur(13px);
-
-    transition: .4s;
-
-    font-size: 17px;
-
-    text-align: center;
-
-    overflow: hidden;
-
-    animation: cardFloat 5s ease-in-out infinite;
-}
-
-.menu a:nth-child(2) {
-    animation-delay: .5s;
-}
-
-.menu a:nth-child(3) {
-    animation-delay: 1s;
-}
-
-.menu a:nth-child(4) {
-    animation-delay: 1.5s;
-}
-
-
-/* แสงบนปุ่ม */
-
-.menu a::before {
-    content: "";
-
-    position: absolute;
-
-    top: 0;
-    left: -100%;
-
-    width: 60%;
-    height: 100%;
-
-    background:
-        linear-gradient(
-            90deg,
-            transparent,
-            rgba(255,255,255,.55),
-            transparent
-        );
-
-    transform: skewX(-20deg);
-
-    transition: .7s;
-}
-
-.menu a:hover::before {
-    left: 130%;
-}
-
-.menu a:hover {
-    transform: translateY(-9px) scale(1.03);
-
-    background:
-        rgba(255,255,255,.68);
-
-    box-shadow:
-        0 18px 40px rgba(113,83,145,.2),
-        0 0 30px rgba(214,180,255,.5);
-}
-
-@keyframes cardFloat {
-
-    0%,100% {
-        transform: translateY(0);
-    }
-
-    50% {
-        transform: translateY(-4px);
-    }
-}
-
-
-/* =========================
-   ติดต่อ
-   ========================= */
-
-.contact-card {
-    position: relative;
-
-    margin-top: 26px;
-
-    padding: 27px;
-
-    border-radius: 30px;
-
-    background:
-        linear-gradient(
-            135deg,
-            rgba(255,255,255,.5),
-            rgba(238,219,255,.38)
-        );
-
-    border: 1px solid rgba(255,255,255,.8);
-
-    box-shadow:
-        0 12px 35px rgba(130,90,180,.14),
-        0 0 25px rgba(255,255,255,.35);
-
-    backdrop-filter: blur(14px);
-
-    text-align: center;
-
-    animation: contactFloat 6s ease-in-out infinite;
-}
-
-@keyframes contactFloat {
-
-    0%,100% {
-        transform: translateY(0);
-    }
-
-    50% {
-        transform: translateY(-5px);
-    }
-}
-
-.contact-title {
-    font-size: 24px;
-
-    color: #76539c;
-
-    font-weight: 600;
-
-    margin-bottom: 15px;
-
-    text-shadow:
-        0 0 10px white;
-}
-
-.contact-card p {
-    margin: 11px 0;
-}
-
-.contact-card a {
-    color: #76539c;
-
-    text-decoration: none;
-
-    transition: .3s;
-}
-
-.contact-card a:hover {
-    text-shadow:
-        0 0 10px #cda9f4;
-}
-
-
-/* =========================
-   ขอบคุณ
-   ========================= */
-
-.thankyou {
-    text-align: center;
-
-    margin-top: 42px;
-
-    padding: 20px;
-}
-
-.thankyou h2 {
-    font-family: 'Itim', cursive;
-
-    font-size: 30px;
-
-    color: #76539c;
-
-    margin-bottom: 8px;
-
-    text-shadow:
-        0 0 10px white,
-        0 0 20px rgba(210,174,248,.6);
-}
-
-.thankyou p {
-    margin: 7px;
-
-    color: #776684;
-}
-
-.heart {
-    color: #9b77bb;
-
-    font-size: 19px;
-
-    text-shadow:
-        0 0 10px white;
-}
-
-
-/* =========================
-   มือถือ
-   ========================= */
-
-@media (max-width: 600px) {
-
-    .container {
-        padding-top: 40px;
-    }
-
-    .profile-frame {
-        width: 150px;
-        height: 150px;
-    }
-
-    .name {
-        font-size: 35px;
-    }
-
-    .portfolio {
-        font-size: 21px;
-    }
-
-    .menu {
-        grid-template-columns: 1fr;
-        gap: 15px;
-    }
-
-    .intro-card {
-        width: 92%;
-        padding: 25px 18px;
-    }
-
-    .intro-title {
-        font-size: 27px;
-    }
-
-    .intro-card p {
-        font-size: 15px;
-    }
-
-    .sparkle {
-        font-size: 16px;
-    }
-
-    .butterfly {
-        font-size: 21px;
+    .menu{
+        grid-template-columns:1fr;
     }
 }
 </style>
 </head>
 
-
 <body>
 
-<!-- ✦ ดาววิ้งค์ ✦ -->
-<div class="sparkle s1">✦</div>
-<div class="sparkle s2">✧</div>
-<div class="sparkle s3">✦</div>
-<div class="sparkle s4">⋆</div>
-<div class="sparkle s5">✧</div>
-<div class="sparkle s6">✦</div>
-<div class="sparkle s7">⋆</div>
-<div class="sparkle s8">✦</div>
-<div class="sparkle s9">✧</div>
-<div class="sparkle s10">✦</div>
+<!-- แถบเมนู -->
+<nav class="top-nav">
+    <a href="index.html">⌂ หน้าแรก</a>
+    <a href="portfolio.html">📖 คำนำ</a>
+    <a href="education.html">🎓 ประวัติการศึกษา</a>
+    <a href="future.html">🏫 อยากเข้าศึกษาต่อ</a>
+    <a href="proud.html">🏆 ผลงานที่ภูมิใจ</a>
+</nav>
 
-<!-- ✨ จุดประกายเล็ก ๆ -->
-<div class="mini-star m1"></div>
-<div class="mini-star m2"></div>
-<div class="mini-star m3"></div>
-<div class="mini-star m4"></div>
-<div class="mini-star m5"></div>
-<div class="mini-star m6"></div>
+<main class="container">
 
-<!-- 🦋 ผีเสื้อ -->
-<div class="butterfly b1">🦋</div>
-<div class="butterfly b2">🦋</div>
-<div class="butterfly b3">🦋</div>
+    <div class="profile">
+        <img src="profile.jpg" alt="Naweeya Dangniem">
+    </div>
 
-<!-- ✿ ดอกไม้ -->
-<div class="flower f1">✿</div>
-<div class="flower f2">❀</div>
-<div class="flower f3">✿</div>
+    <h1>Naweeya Dangniem</h1>
 
+    <div class="portfolio-title">
+        ✦ Portfolio ✦
+    </div>
 
-<div class="container">
+    <div class="subtitle">
+        นักเรียนชั้นมัธยมศึกษาปีที่ 6
+    </div>
 
-    <!-- โปรไฟล์ -->
-    <section class="profile-section">
-
-        <div class="profile-frame">
-            <img src="profile.jpg" alt="นวียา แดงเนียม">
-        </div>
-
-        <div class="name">
-            Naweeya Dangniem
-        </div>
-
-        <div class="portfolio">
-            ✦ 𝙋𝙤𝙧𝙩𝙛𝙤𝙡𝙞𝙤 ✦
-        </div>
-
-        <div class="subtitle">
-            นักเรียนชั้นมัธยมศึกษาปีที่ 6
-        </div>
-
-    </section>
-
-
-    <!-- ✦ แนะนำตัว ✦ -->
     <div class="intro-card">
 
         <div class="intro-title">
@@ -883,50 +246,49 @@ body::after {
         </div>
 
         <p>
-            สวัสดีค่ะ หนูชื่อ <b>นวียา แดงเนียม</b>
+            สวัสดีค่ะ หนูชื่อ <b>นวียา แดงเนียม</b><br>
+            ชื่อเล่น <b>เหนือ</b> ♡
         </p>
 
         <p>
-            ชื่อเล่น เหนือ อายุ 17 ปี 
             ปัจจุบันกำลังศึกษาอยู่ชั้นมัธยมศึกษาปีที่ 6
-            โรงเรียนบ้านบึงอุตสาหกรรมนุเคราะห์ 
+            และมีความสนใจด้านคอมพิวเตอร์ เทคโนโลยี
+            และการสร้างสรรค์ผลงานใหม่ ๆ
         </p>
 
     </div>
 
+    <section class="menu">
 
-    <!-- เมนูเดิม -->
-    <div class="menu">
-
-        <a href="portfolio.html">
-            ✦<br>
-            คำนำ
+        <a class="card" href="portfolio.html">
+            <div class="icon">📖</div>
+            <h2>คำนำ</h2>
+            <p>ความตั้งใจและเป้าหมายในการจัดทำ Portfolio</p>
         </a>
 
-        <a href="education.html">
-            🎓<br>
-            ประวัติการศึกษา
+        <a class="card" href="education.html">
+            <div class="icon">🎓</div>
+            <h2>ประวัติการศึกษา</h2>
+            <p>เส้นทางการเรียนรู้และการศึกษา</p>
         </a>
 
-        <a href="future.html">
-            💻<br>
-            อยากเข้าศึกษาต่อ
+        <a class="card" href="future.html">
+            <div class="icon">🏫</div>
+            <h2>อยากเข้าศึกษาต่อ</h2>
+            <p>มหาวิทยาลัยและสาขาที่ใฝ่ฝัน</p>
         </a>
 
-        <a href="proud.html">
-            ✨<br>
-            ผลงานที่ภูมิใจ
+        <a class="card" href="proud.html">
+            <div class="icon">🏆</div>
+            <h2>ผลงานที่ภูมิใจ</h2>
+            <p>ผลงาน กิจกรรม และประสบการณ์ที่ภาคภูมิใจ</p>
         </a>
 
-    </div>
+    </section>
 
+    <section class="contact">
 
-    <!-- ติดต่อ -->
-    <div class="contact-card">
-
-        <div class="contact-title">
-            ✦ ติดต่อ ✦
-        </div>
+        <h2>✦ ติดต่อ ✦</h2>
 
         <p>
             📧
@@ -943,35 +305,27 @@ body::after {
         </p>
 
         <p>
-            📷
-            <a href="https://www.instagram.com/lisnnuea/" target="_blank">
+            📷 Instagram :
+            <a href="https://www.instagram.com/lisnnuea">
                 @lisnnuea
             </a>
         </p>
 
-    </div>
+    </section>
 
-
-    <!-- ขอบคุณ -->
     <div class="thankyou">
 
-        <h2>✦ ขอบคุณ ✦</h2>
+        <div class="thankyou-title">
+            ✦ ขอบคุณ ✦
+        </div>
 
-        <p>
-            ขอบคุณที่เข้ามาเยี่ยมชมแฟ้มสะสมผลงานของหนู
-        </p>
-
-        <p>
-            ขอให้ทุกความฝันของเราค่อย ๆ เติบโตไปด้วยกัน
-        </p>
-
-        <p class="heart">
-            ♡ nwy ♡
-        </p>
+        ขอบคุณที่เข้ามาเยี่ยมชมแฟ้มสะสมผลงานของหนู<br>
+        ขอให้ทุกความฝันของเราค่อย ๆ เติบโตไปด้วยกัน<br>
+        ♡ นวียา แดงเนียม ♡
 
     </div>
 
-</div>
+</main>
 
 </body>
 </html>
