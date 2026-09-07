@@ -42,9 +42,9 @@ body {
 }
 
 
-/* =====================================
-   พื้นหลังฟุ้ง ๆ
-===================================== */
+/* =========================
+   พื้นหลังฟุ้ง
+========================= */
 
 body::before {
     content: "";
@@ -52,13 +52,16 @@ body::before {
     inset: -100px;
 
     background:
-        radial-gradient(circle at 30% 30%,
-            rgba(255,255,255,.45),
-            transparent 15%),
-
-        radial-gradient(circle at 70% 70%,
+        radial-gradient(
+            circle at 30% 30%,
+            rgba(255,255,255,.5),
+            transparent 15%
+        ),
+        radial-gradient(
+            circle at 70% 70%,
             rgba(197,156,245,.25),
-            transparent 20%);
+            transparent 20%
+        );
 
     filter: blur(50px);
 
@@ -67,9 +70,9 @@ body::before {
 }
 
 
-/* =====================================
-   ของลอยทั้งหมด
-===================================== */
+/* =========================
+   ของลอย
+========================= */
 
 .floating {
     position: fixed;
@@ -131,22 +134,23 @@ body::before {
 }
 
 
-/* =====================================
-   ผีเสื้อ
-===================================== */
+/* =========================
+   ผีเสื้อบิน
+========================= */
 
 .butterfly {
     position: absolute;
 
     font-size: 27px;
 
-    opacity: .65;
+    opacity: .7;
 
     filter:
-        drop-shadow(0 0 8px #ffffff)
+        drop-shadow(0 0 8px white)
         drop-shadow(0 0 15px #c9a3f2);
 
-    animation: butterflyMove 13s linear infinite;
+    animation:
+        butterflyMove 13s linear infinite;
 }
 
 
@@ -185,8 +189,6 @@ body::before {
 }
 
 
-/* ผีเสื้อตัวที่สอง */
-
 .butterfly.two {
     animation-duration: 17s;
     animation-delay: -7s;
@@ -194,24 +196,25 @@ body::before {
 }
 
 
-/* =====================================
-   ดอกไม้ลอย
-===================================== */
+/* =========================
+   ดอกไม้
+========================= */
 
 .flower {
     position: absolute;
 
-    color: #ffffff;
+    color: white;
 
     font-size: 22px;
 
-    opacity: .6;
+    opacity: .65;
 
     text-shadow:
-        0 0 10px #ffffff,
+        0 0 10px white,
         0 0 18px #c29aef;
 
-    animation: flowerFloat 10s ease-in-out infinite;
+    animation:
+        flowerFloat 10s ease-in-out infinite;
 }
 
 
@@ -232,11 +235,12 @@ body::before {
 }
 
 
-/* =====================================
-   ลูกแก้ว / ฟองลอย
-===================================== */
+/* =========================
+   ลูกแก้ว
+========================= */
 
 .bubble {
+
     position: absolute;
 
     width: 25px;
@@ -252,13 +256,16 @@ body::before {
             rgba(255,255,255,.1)
         );
 
-    border: 1px solid rgba(255,255,255,.7);
+    border:
+        1px solid
+        rgba(255,255,255,.7);
 
     box-shadow:
         0 0 15px rgba(255,255,255,.8),
         0 0 30px rgba(189,144,238,.4);
 
-    animation: bubbleMove 12s ease-in-out infinite;
+    animation:
+        bubbleMove 12s ease-in-out infinite;
 }
 
 
@@ -269,6 +276,7 @@ body::before {
             translateY(100vh)
             translateX(0)
             scale(.7);
+
         opacity: 0;
     }
 
@@ -292,17 +300,19 @@ body::before {
             translateY(-100px)
             translateX(-30px)
             scale(.5);
+
         opacity: 0;
     }
 
 }
 
 
-/* =====================================
-   เส้นแสงวิ่ง
-===================================== */
+/* =========================
+   แสงวิ่ง
+========================= */
 
 .light {
+
     position: absolute;
 
     width: 170px;
@@ -320,7 +330,8 @@ body::before {
 
     transform: rotate(-25deg);
 
-    animation: lightMove 8s linear infinite;
+    animation:
+        lightMove 8s linear infinite;
 }
 
 
@@ -345,9 +356,9 @@ body::before {
 }
 
 
-/* =====================================
+/* =========================
    เนื้อหา
-===================================== */
+========================= */
 
 .container {
 
@@ -367,9 +378,9 @@ body::before {
 }
 
 
-/* =====================================
-   Header
-===================================== */
+/* =========================
+   โปรไฟล์
+========================= */
 
 .hero {
 
@@ -433,7 +444,8 @@ body::before {
         0 0 12px white,
         0 0 20px #a979df;
 
-    animation: twinkle 2s infinite;
+    animation:
+        twinkle 2s infinite;
 }
 
 
@@ -454,7 +466,8 @@ body::before {
         0 0 12px white,
         0 0 20px #a979df;
 
-    animation: twinkle 2.5s infinite;
+    animation:
+        twinkle 2.5s infinite;
 }
 
 
@@ -476,7 +489,8 @@ h1 {
     color: #633a9c;
 
     text-shadow:
-        0 3px 12px rgba(255,255,255,.95);
+        0 3px 12px
+        rgba(255,255,255,.95);
 }
 
 
@@ -508,9 +522,9 @@ h1 {
 }
 
 
-/* =====================================
+/* =========================
    เมนู
-===================================== */
+========================= */
 
 .menu {
 
@@ -624,9 +638,9 @@ h1 {
 }
 
 
-/* =====================================
+/* =========================
    ติดต่อ
-===================================== */
+========================= */
 
 .contact {
 
@@ -700,27 +714,36 @@ h1 {
 }
 
 
-/* =====================================
+/* =========================
    ขอบคุณ
-===================================== */
+========================= */
 
 .thankyou {
 
     text-align: center;
 
-    margin-top: 45px;
+    margin-top: 48px;
 
-    padding-bottom: 10px;
+    padding-bottom: 25px;
 
     font-family:
         'Playfair Display',
         serif;
 
-    font-size: 30px;
+    color: #7953a8;
+
+}
+
+
+/* คำว่า ขอบคุณ */
+
+.thankyou-title {
+
+    font-size: 34px;
 
     font-style: italic;
 
-    color: #7953a8;
+    margin-bottom: 10px;
 
     text-shadow:
         0 0 12px
@@ -731,25 +754,60 @@ h1 {
 }
 
 
+/* ประโยค */
+
+.thankyou-text {
+
+    font-size: 16px;
+
+    font-family:
+        'Kanit',
+        sans-serif;
+
+    font-weight: 300;
+
+    color: #8062a4;
+
+    margin-bottom: 13px;
+}
+
+
+/* ชื่อ */
+
+.thankyou-name {
+
+    font-size: 19px;
+
+    letter-spacing: 2px;
+
+    color: #7951a6;
+}
+
+
 @keyframes thankGlow {
 
     0%,100% {
+
         opacity: .7;
+
     }
 
     50% {
+
         opacity: 1;
+
         text-shadow:
             0 0 10px white,
             0 0 25px #c8a4f2;
+
     }
 
 }
 
 
-/* =====================================
+/* =========================
    มือถือ
-===================================== */
+========================= */
 
 @media (max-width: 650px) {
 
@@ -778,6 +836,10 @@ h1 {
         padding: 25px 23px;
     }
 
+    .thankyou-title {
+        font-size: 30px;
+    }
+
 }
 
 </style>
@@ -787,70 +849,129 @@ h1 {
 <body>
 
 
-<!-- =====================================
+<!-- =========================
      ของลอย ๆ
-===================================== -->
+========================= -->
 
 <div class="floating">
 
     <!-- ดาว -->
-    <span class="star" style="left:7%;top:12%;animation-delay:0s;">✦</span>
 
-    <span class="star" style="left:18%;top:27%;animation-delay:1s;">✧</span>
+    <span class="star"
+          style="left:7%;top:12%;animation-delay:0s;">
+        ✦
+    </span>
 
-    <span class="star" style="left:90%;top:15%;animation-delay:2s;">✦</span>
+    <span class="star"
+          style="left:18%;top:27%;animation-delay:1s;">
+        ✧
+    </span>
 
-    <span class="star" style="left:82%;top:30%;animation-delay:3s;">⋆</span>
+    <span class="star"
+          style="left:90%;top:15%;animation-delay:2s;">
+        ✦
+    </span>
 
-    <span class="star" style="left:5%;top:55%;animation-delay:1.5s;">✧</span>
+    <span class="star"
+          style="left:82%;top:30%;animation-delay:3s;">
+        ⋆
+    </span>
 
-    <span class="star" style="left:94%;top:58%;animation-delay:2.5s;">✦</span>
+    <span class="star"
+          style="left:5%;top:55%;animation-delay:1.5s;">
+        ✧
+    </span>
 
-    <span class="star" style="left:14%;top:82%;animation-delay:3.5s;">⋆</span>
+    <span class="star"
+          style="left:94%;top:58%;animation-delay:2.5s;">
+        ✦
+    </span>
 
-    <span class="star" style="left:78%;top:78%;animation-delay:4s;">✧</span>
+    <span class="star"
+          style="left:14%;top:82%;animation-delay:3.5s;">
+        ⋆
+    </span>
 
-    <span class="star" style="left:48%;top:6%;animation-delay:1s;">✦</span>
+    <span class="star"
+          style="left:78%;top:78%;animation-delay:4s;">
+        ✧
+    </span>
 
-    <span class="star" style="left:58%;top:90%;animation-delay:2s;">✧</span>
+    <span class="star"
+          style="left:48%;top:6%;animation-delay:1s;">
+        ✦
+    </span>
 
 
     <!-- ผีเสื้อ -->
-    <span class="butterfly" style="top:60%;left:-5%;">🦋</span>
 
-    <span class="butterfly two" style="top:20%;left:-10%;">🦋</span>
+    <span class="butterfly"
+          style="top:60%;left:-5%;">
+        🦋
+    </span>
+
+    <span class="butterfly two"
+          style="top:20%;left:-10%;">
+        🦋
+    </span>
 
 
     <!-- ดอกไม้ -->
-    <span class="flower" style="left:12%;top:48%;animation-delay:1s;">✿</span>
 
-    <span class="flower" style="left:86%;top:43%;animation-delay:3s;">❀</span>
+    <span class="flower"
+          style="left:12%;top:48%;animation-delay:1s;">
+        ✿
+    </span>
 
-    <span class="flower" style="left:25%;top:88%;animation-delay:2s;">✿</span>
+    <span class="flower"
+          style="left:86%;top:43%;animation-delay:3s;">
+        ❀
+    </span>
 
-    <span class="flower" style="left:72%;top:85%;animation-delay:4s;">❀</span>
+    <span class="flower"
+          style="left:25%;top:88%;animation-delay:2s;">
+        ✿
+    </span>
+
+    <span class="flower"
+          style="left:72%;top:85%;animation-delay:4s;">
+        ❀
+    </span>
 
 
     <!-- ลูกแก้ว -->
+
     <span class="bubble"
           style="left:10%;animation-delay:0s;">
     </span>
 
     <span class="bubble"
-          style="left:30%;animation-delay:4s;width:16px;height:16px;">
+          style="left:30%;
+                 animation-delay:4s;
+                 width:16px;
+                 height:16px;">
     </span>
 
     <span class="bubble"
-          style="left:65%;animation-delay:2s;width:32px;height:32px;">
+          style="left:65%;
+                 animation-delay:2s;
+                 width:32px;
+                 height:32px;">
     </span>
 
     <span class="bubble"
-          style="left:85%;animation-delay:6s;width:18px;height:18px;">
+          style="left:85%;
+                 animation-delay:6s;
+                 width:18px;
+                 height:18px;">
     </span>
 
 
-    <!-- แสงวิ่ง -->
-    <span class="light" style="animation-delay:0s;"></span>
+    <!-- แสง -->
+
+    <span class="light"
+          style="animation-delay:0s;">
+    </span>
 
     <span class="light"
           style="animation-delay:4s;top:30%;">
@@ -859,9 +980,9 @@ h1 {
 </div>
 
 
-<!-- =====================================
+<!-- =========================
      เนื้อหา
-===================================== -->
+========================= -->
 
 <div class="container">
 
@@ -978,7 +1099,7 @@ h1 {
 
 
 
-    <!-- ติดต่อ -->
+    <!-- ช่องทางติดต่อ -->
 
     <div class="contact">
 
@@ -1017,14 +1138,36 @@ h1 {
 
 
 
-    <!-- ขอบคุณ -->
+    <!-- =========================
+         ขอบคุณ
+    ========================= -->
 
     <div class="thankyou">
-        ขอบคุณ
+
+        <div class="thankyou-title">
+            ✦ ขอบคุณ ✦
+        </div>
+
+
+        <div class="thankyou-text">
+            ขอบคุณที่เข้ามาเยี่ยมชมแฟ้มสะสมผลงานของหนู
+        </div>
+
+
+        <div class="thankyou-text">
+            ขอให้ทุกความฝันของเราค่อย ๆ เติบโตไปด้วยกัน
+        </div>
+
+
+        <div class="thankyou-name">
+            ♡ นวียา แดงเนียม ♡
+        </div>
+
     </div>
 
 
 </div>
+
 
 </body>
 </html>
