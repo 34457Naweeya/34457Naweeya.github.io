@@ -2,12 +2,19 @@
 <html lang="th">
 
 <head>
+
 <meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<meta name="viewport"
+content="width=device-width, initial-scale=1.0">
 
 <title>ความสามารถพิเศษ | Naweeya Dangniem</title>
 
 <style>
+
+/* =========================
+   พื้นฐาน
+========================= */
 
 * {
     box-sizing: border-box;
@@ -16,123 +23,141 @@
 }
 
 body {
-    font-family: "Trebuchet MS", sans-serif;
+
+    font-family:
+    "Trebuchet MS",
+    sans-serif;
+
     min-height: 100vh;
+
     color: #5b3877;
 
-    background:
-    radial-gradient(circle at 10% 20%, #ffffff 0%, transparent 20%),
-    radial-gradient(circle at 90% 30%, #ead5ff 0%, transparent 25%),
-    linear-gradient(135deg, #f8efff, #e6ceff, #f7e9ff);
-
     overflow-x: hidden;
+
+    background:
+    radial-gradient(
+        circle at 10% 20%,
+        #ffffff 0%,
+        transparent 20%
+    ),
+
+    radial-gradient(
+        circle at 90% 30%,
+        #ead5ff 0%,
+        transparent 25%
+    ),
+
+    linear-gradient(
+        135deg,
+        #f8efff,
+        #e6ceff,
+        #f7e9ff
+    );
 }
 
 
-/* ของลอย */
+/* =========================
+   ของตกแต่งลอย
+========================= */
 
 .magic {
+
     position: fixed;
-    pointer-events: none;
-    animation: float 5s ease-in-out infinite;
+
     z-index: 0;
+
+    pointer-events: none;
+
+    animation:
+    float 5s ease-in-out infinite;
 }
 
 .m1 {
+
     top: 15%;
     left: 6%;
+
     font-size: 35px;
 }
 
 .m2 {
+
     top: 25%;
     right: 7%;
+
     font-size: 40px;
+
     animation-delay: 1s;
 }
 
 .m3 {
-    top: 65%;
+
+    top: 60%;
     left: 8%;
+
     font-size: 30px;
+
     animation-delay: 2s;
 }
 
 .m4 {
-    top: 75%;
+
+    top: 70%;
     right: 8%;
+
     font-size: 35px;
+
     animation-delay: 1.5s;
 }
 
 .m5 {
+
     top: 45%;
     right: 20%;
+
     font-size: 25px;
+
     animation-delay: 2.5s;
 }
 
 @keyframes float {
 
-    0%, 100% {
-        transform: translateY(0) rotate(0deg);
+    0%,100% {
+
+        transform:
+        translateY(0)
+        rotate(0deg);
     }
 
     50% {
-        transform: translateY(-20px) rotate(12deg);
+
+        transform:
+        translateY(-20px)
+        rotate(12deg);
     }
 
 }
 
 
-/* ปุ่มกลับหน้าหลัก */
-
-.back {
-    position: relative;
-    z-index: 10;
-
-    display: inline-block;
-
-    margin: 25px;
-
-    padding: 12px 22px;
-
-    background: #704394;
-    color: white;
-
-    text-decoration: none;
-
-    border-radius: 25px;
-
-    font-weight: bold;
-
-    box-shadow:
-    0 6px 15px rgba(91,55,125,.25);
-
-    transition: .3s;
-}
-
-.back:hover {
-    background: #9062b9;
-
-    transform:
-    translateY(-4px);
-}
-
-
-/* หัวข้อ */
+/* =========================
+   หัวข้อ
+========================= */
 
 header {
+
     position: relative;
+
     z-index: 2;
 
     text-align: center;
 
-    padding: 20px 20px 35px;
+    padding:
+    55px 20px 30px;
 }
 
 .castle {
-    font-size: 70px;
+
+    font-size: 75px;
 
     animation:
     castleFloat 4s ease-in-out infinite;
@@ -140,18 +165,23 @@ header {
 
 @keyframes castleFloat {
 
-    0%, 100% {
-        transform: translateY(0);
+    0%,100% {
+
+        transform:
+        translateY(0);
     }
 
     50% {
-        transform: translateY(-10px);
+
+        transform:
+        translateY(-10px);
     }
 
 }
 
 h1 {
-    margin-top: 10px;
+
+    margin-top: 12px;
 
     font-size: 40px;
 
@@ -162,33 +192,41 @@ h1 {
 }
 
 .subtitle {
+
     margin-top: 10px;
 
-    font-size: 17px;
-
     color: #9360b9;
+
+    font-size: 17px;
 }
 
 
-/* กล่องเนื้อหา */
+/* =========================
+   เนื้อหา
+========================= */
 
 .container {
+
     position: relative;
+
     z-index: 2;
 
     width: 90%;
+
     max-width: 900px;
 
     margin: auto;
 }
 
 
-/* กล่องทักษะ */
+/* =========================
+   กล่องทักษะ
+========================= */
 
 .skill-box {
 
     background:
-    rgba(255,255,255,.85);
+    rgba(255,255,255,.88);
 
     border:
     3px solid #cba0ec;
@@ -208,7 +246,8 @@ h1 {
 
 .skill-box:hover {
 
-    transform: translateY(-5px);
+    transform:
+    translateY(-5px);
 
     box-shadow:
     0 15px 30px
@@ -224,17 +263,10 @@ h1 {
     text-align: center;
 }
 
-.skill-box p {
 
-    font-size: 16px;
-
-    line-height: 1.8;
-
-    text-align: center;
-}
-
-
-/* รายการ */
+/* =========================
+   การ์ดทักษะ
+========================= */
 
 .skills {
 
@@ -243,12 +275,10 @@ h1 {
     grid-template-columns:
     repeat(
         auto-fit,
-        minmax(200px, 1fr)
+        minmax(200px,1fr)
     );
 
     gap: 15px;
-
-    margin-top: 15px;
 }
 
 .skill {
@@ -293,39 +323,118 @@ h1 {
 }
 
 
-/* ขอบคุณ */
+/* =========================
+   จุดเด่น
+========================= */
 
-.thanks {
+.description {
+
+    font-size: 16px;
+
+    line-height: 1.8;
+
+    text-align: center;
+}
+
+
+/* =========================
+   ปุ่มกลับหน้าหลัก
+========================= */
+
+.bottom-back {
 
     position: relative;
+
     z-index: 2;
 
     text-align: center;
 
-    margin: 50px 0 30px;
+    margin:
+    45px 0 20px;
+}
 
-    color: #704397;
+.bottom-back a {
+
+    display: inline-block;
+
+    padding:
+    13px 28px;
+
+    background:
+    #704394;
+
+    color: white;
+
+    text-decoration: none;
+
+    border-radius: 25px;
 
     font-weight: bold;
 
-    font-size: 18px;
+    box-shadow:
+    0 6px 15px
+    rgba(91,55,125,.25);
+
+    transition: .3s;
+}
+
+.bottom-back a:hover {
+
+    background:
+    #9062b9;
+
+    transform:
+    translateY(-4px);
+
+    box-shadow:
+    0 10px 20px
+    rgba(91,55,125,.3);
 }
 
 
-/* มือถือ */
+/* =========================
+   ขอบคุณ
+========================= */
 
-@media (max-width: 600px) {
+.thanks {
+
+    position: relative;
+
+    z-index: 2;
+
+    text-align: center;
+
+    margin:
+    20px 0 35px;
+
+    color: #704397;
+
+    font-size: 18px;
+
+    font-weight: bold;
+}
+
+
+/* =========================
+   มือถือ
+========================= */
+
+@media (max-width:600px) {
 
     h1 {
+
         font-size: 30px;
     }
 
     .castle {
+
         font-size: 55px;
     }
 
     .skill-box {
-        padding: 22px 18px;
+
+        padding:
+        22px 18px;
     }
 
 }
@@ -338,23 +447,34 @@ h1 {
 <body>
 
 
-<!-- ของตกแต่งลอย -->
+<!-- =========================
+     ของตกแต่ง
+========================= -->
 
-<div class="magic m1">🦋</div>
-<div class="magic m2">🌙</div>
-<div class="magic m3">🌸</div>
-<div class="magic m4">✨</div>
-<div class="magic m5">💜</div>
+<div class="magic m1">
+    🦋
+</div>
+
+<div class="magic m2">
+    🌙
+</div>
+
+<div class="magic m3">
+    🌸
+</div>
+
+<div class="magic m4">
+    ✨
+</div>
+
+<div class="magic m5">
+    💜
+</div>
 
 
-<!-- กลับหน้าหลักอย่างเดียว -->
-
-<a href="index.html" class="back">
-    🏰 กลับหน้าหลัก
-</a>
-
-
-<!-- หัวข้อ -->
+<!-- =========================
+     หัวข้อ
+========================= -->
 
 <header>
 
@@ -373,10 +493,14 @@ h1 {
 </header>
 
 
-<!-- เนื้อหา -->
+<!-- =========================
+     เนื้อหา
+========================= -->
 
 <div class="container">
 
+
+    <!-- ทักษะคอมพิวเตอร์ -->
 
     <div class="skill-box">
 
@@ -384,32 +508,61 @@ h1 {
             💻 ทักษะด้านคอมพิวเตอร์
         </h2>
 
+
         <div class="skills">
 
+
             <div class="skill">
-                <div class="icon">🌐</div>
+
+                <div class="icon">
+                    🌐
+                </div>
+
                 HTML
+
             </div>
 
+
             <div class="skill">
-                <div class="icon">🎨</div>
+
+                <div class="icon">
+                    🎨
+                </div>
+
                 CSS
+
             </div>
 
+
             <div class="skill">
-                <div class="icon">💻</div>
+
+                <div class="icon">
+                    💻
+                </div>
+
                 การเขียนโค้ด
+
             </div>
 
+
             <div class="skill">
-                <div class="icon">🖥️</div>
+
+                <div class="icon">
+                    🖥️
+                </div>
+
                 การใช้งานคอมพิวเตอร์
+
             </div>
+
 
         </div>
 
     </div>
 
+
+
+    <!-- โปรแกรม -->
 
     <div class="skill-box">
 
@@ -417,32 +570,61 @@ h1 {
             🪄 โปรแกรมที่สามารถใช้งานได้
         </h2>
 
+
         <div class="skills">
 
+
             <div class="skill">
-                <div class="icon">📊</div>
+
+                <div class="icon">
+                    📊
+                </div>
+
                 Microsoft Excel
+
             </div>
 
+
             <div class="skill">
-                <div class="icon">📄</div>
+
+                <div class="icon">
+                    📄
+                </div>
+
                 Microsoft Word
+
             </div>
 
+
             <div class="skill">
-                <div class="icon">🎨</div>
+
+                <div class="icon">
+                    🎨
+                </div>
+
                 Canva
+
             </div>
 
+
             <div class="skill">
-                <div class="icon">🏠</div>
+
+                <div class="icon">
+                    🏠
+                </div>
+
                 Autodesk 3ds Max
+
             </div>
+
 
         </div>
 
     </div>
 
+
+
+    <!-- จุดเด่น -->
 
     <div class="skill-box">
 
@@ -450,11 +632,13 @@ h1 {
             🌟 จุดเด่นของฉัน
         </h2>
 
-        <p>
+        <p class="description">
+
             เป็นคนที่สนใจด้านเทคโนโลยีและคอมพิวเตอร์
             ชอบเรียนรู้สิ่งใหม่ ๆ และพยายามฝึกฝน
             ทักษะด้านการเขียนโค้ดและการออกแบบ
             เพื่อนำไปพัฒนาต่อยอดในอนาคตค่ะ 💜
+
         </p>
 
     </div>
@@ -463,8 +647,26 @@ h1 {
 </div>
 
 
+<!-- =========================
+     กลับหน้าหลัก
+     อยู่ด้านล่างสุด
+========================= -->
+
+<div class="bottom-back">
+
+    <a href="index.html">
+        🏰 กลับหน้าหลัก
+    </a>
+
+</div>
+
+
+<!-- ขอบคุณ -->
+
 <div class="thanks">
+
     ✨ ขอบคุณที่เข้ามาเยี่ยมชมค่ะ 💜 ✨
+
 </div>
 
 
