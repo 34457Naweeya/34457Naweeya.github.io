@@ -28,18 +28,8 @@ body{
     color:#51376b;
 
     background:
-    radial-gradient(
-        circle at 15% 15%,
-        #fff,
-        transparent 18%
-    ),
-
-    radial-gradient(
-        circle at 85% 20%,
-        #f5e5ff,
-        transparent 25%
-    ),
-
+    radial-gradient(circle at 15% 15%,#fff,transparent 18%),
+    radial-gradient(circle at 85% 20%,#f5e5ff,transparent 25%),
     linear-gradient(
         135deg,
         #eee0ff,
@@ -52,9 +42,7 @@ body{
 }
 
 
-/* =========================
-   ดาว
-========================= */
+/* ดาว */
 
 .star{
 
@@ -64,8 +52,7 @@ body{
 
     font-size:22px;
 
-    animation:
-    twinkle 2s infinite alternate;
+    animation:twinkle 2s infinite alternate;
 
     pointer-events:none;
 }
@@ -105,9 +92,7 @@ body{
 }
 
 
-/* =========================
-   กล่องหลัก
-========================= */
+/* กล่องหลัก */
 
 .container{
 
@@ -118,13 +103,11 @@ body{
 
 .box{
 
-    background:
-    rgba(255,255,255,.28);
+    background:rgba(255,255,255,.28);
 
     backdrop-filter:blur(15px);
 
-    border:
-    2px solid rgba(255,255,255,.7);
+    border:2px solid rgba(255,255,255,.7);
 
     border-radius:35px;
 
@@ -136,9 +119,7 @@ body{
 }
 
 
-/* =========================
-   หัวข้อ
-========================= */
+/* หัวข้อ */
 
 h1{
 
@@ -150,8 +131,7 @@ h1{
 
     color:#68458b;
 
-    text-shadow:
-    2px 2px white;
+    text-shadow:2px 2px white;
 }
 
 .subtitle{
@@ -164,36 +144,29 @@ h1{
 }
 
 
-/* =========================
-   ผลงาน
-========================= */
+/* ผลงาน */
 
 .works{
 
     display:grid;
 
-    grid-template-columns:
-    repeat(2,1fr);
+    grid-template-columns:repeat(2,1fr);
 
     gap:28px;
 }
 
 
-/* =========================
-   กล่องผลงาน
-========================= */
+/* กล่องผลงาน */
 
 .work{
 
-    background:
-    rgba(255,255,255,.72);
+    background:rgba(255,255,255,.72);
 
     border-radius:28px;
 
     padding:18px;
 
-    border:
-    1px solid white;
+    border:1px solid white;
 
     box-shadow:
     0 8px 25px
@@ -204,8 +177,7 @@ h1{
 
 .work:hover{
 
-    transform:
-    translateY(-8px);
+    transform:translateY(-8px);
 
     box-shadow:
     0 15px 35px
@@ -213,22 +185,17 @@ h1{
 }
 
 
-/* =========================
-   ช่องรูปใบเกียรติบัตร
-   อัตราส่วน A4 แนวนอน
-========================= */
+/* ช่องใบเกียรติบัตร */
 
 .image-box{
 
     width:100%;
 
-    aspect-ratio:
-    1.414 / 1;
+    aspect-ratio:1.414 / 1;
 
     border-radius:18px;
 
-    border:
-    3px solid #c5a1df;
+    border:3px solid #c5a1df;
 
     background:
     linear-gradient(
@@ -266,9 +233,7 @@ h1{
 }
 
 
-/* =========================
-   ชื่อผลงาน
-========================= */
+/* ชื่อ */
 
 .work h2{
 
@@ -282,9 +247,7 @@ h1{
 }
 
 
-/* =========================
-   รายละเอียด
-========================= */
+/* รายละเอียด */
 
 .work p{
 
@@ -298,9 +261,7 @@ h1{
 }
 
 
-/* =========================
-   ปุ่มกลับ
-========================= */
+/* ปุ่มกลับ */
 
 .back{
 
@@ -325,16 +286,13 @@ h1{
 
 .back:hover{
 
-    transform:
-    translateY(-4px);
+    transform:translateY(-4px);
 
     background:#9164b6;
 }
 
 
-/* =========================
-   มือถือ
-========================= */
+/* มือถือ */
 
 @media(max-width:750px){
 
@@ -376,10 +334,6 @@ h1{
 <div class="box">
 
 
-<!-- =========================
-     หัวข้อ
-========================= -->
-
 <h1>
     ผลงานที่ภูมิใจ
 </h1>
@@ -413,6 +367,7 @@ h1{
 
     <p>
 Mini Startup Camp [Non-EE]
+
 K-ENGINEERING WORLD TOUR AND COMPETENCY CHALLENGE 2026
 คณะวิศวกรรมศาสตร์ สจล.
 
@@ -444,8 +399,11 @@ K-ENGINEERING WORLD TOUR AND COMPETENCY CHALLENGE 2026
 
     <p>
 รางวัลชนะเลิศ อันดับ 2
-การประกวดแข่งขันการนำเสนอผลงานโครงงานนวัตกรรม
-ในรูปแบบโปสเตอร์ (Poster Presentation)
+
+การประกวดแข่งขันการนำเสนอผลงาน
+โครงงานนวัตกรรมในรูปแบบโปสเตอร์
+(Poster Presentation)
+
 กิจกรรมสัมมนาคอมพิวเตอร์
 หัวข้อเรื่อง สัมมนาพัฒนาเทคโนโลยี
 
@@ -508,7 +466,7 @@ K-ENGINEERING WORLD TOUR AND COMPETENCY CHALLENGE 2026
     </h2>
 
     <p>
-ผลงานและกิจกรรมที่เข้าร่วม
+ผลงานและกิจกรรมที่ได้เข้าร่วม
 เพื่อพัฒนาทักษะและประสบการณ์
 ด้านเทคโนโลยีและวิศวกรรม
     </p>
@@ -564,37 +522,9 @@ K-ENGINEERING WORLD TOUR AND COMPETENCY CHALLENGE 2026
     </h2>
 
     <p>
-ผลงานที่ได้จัดทำและเข้าร่วมกิจกรรม
-เพื่อพัฒนาทักษะด้านคอมพิวเตอร์
-และเทคโนโลยี
-    </p>
-
-</div>
-
-
-<!-- =========================
-     ผลงานที่ 7
-========================= -->
-
-<div class="work">
-
-    <div class="image-box">
-
-        <img
-            src="work7.jpg"
-            alt="ผลงานที่ 7"
-        >
-
-    </div>
-
-    <h2>
-        ผลงานที่ 7
-    </h2>
-
-    <p>
-ผลงานและประสบการณ์ที่ภาคภูมิใจ
-ซึ่งช่วยให้ได้เรียนรู้สิ่งใหม่ ๆ
-และพัฒนาตนเองมากยิ่งขึ้น
+ผลงานและประสบการณ์ที่ได้เข้าร่วม
+ช่วยให้ได้เรียนรู้สิ่งใหม่ ๆ
+และพัฒนาทักษะของตนเอง
     </p>
 
 </div>
@@ -603,9 +533,7 @@ K-ENGINEERING WORLD TOUR AND COMPETENCY CHALLENGE 2026
 </div>
 
 
-<!-- =========================
-     กลับหน้าแรก
-========================= -->
+<!-- กลับหน้าแรก -->
 
 <a href="index.html" class="back">
     🏰 กลับหน้าแรก
