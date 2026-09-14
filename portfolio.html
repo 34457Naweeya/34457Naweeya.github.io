@@ -13,40 +13,132 @@
 
 * {
     box-sizing: border-box;
+    margin: 0;
+    padding: 0;
 }
 
 body {
 
-    margin: 0;
+    font-family: "Trebuchet MS", sans-serif;
 
     min-height: 100vh;
 
-    font-family: "Tahoma", sans-serif;
-
-    color: #62466f;
-
-    background:
-        radial-gradient(
-            circle at 20% 20%,
-            #ffffff 0 3%,
-            transparent 12%
-        ),
-
-        radial-gradient(
-            circle at 80% 30%,
-            #ffffff 0 2%,
-            transparent 10%
-        ),
-
-        linear-gradient(
-            135deg,
-            #eee3ff,
-            #d9c4f7,
-            #f6edff,
-            #dfcaf7
-        );
+    color: #563477;
 
     overflow-x: hidden;
+
+    background:
+    radial-gradient(
+        circle at 10% 20%,
+        #ffffff 0%,
+        transparent 20%
+    ),
+
+    radial-gradient(
+        circle at 90% 30%,
+        #ead5ff 0%,
+        transparent 25%
+    ),
+
+    linear-gradient(
+        135deg,
+        #f8efff,
+        #e6ceff,
+        #f7e9ff
+    );
+}
+
+
+/* =========================
+   ของตกแต่งลอย
+========================= */
+
+.magic {
+
+    position: fixed;
+
+    z-index: 0;
+
+    pointer-events: none;
+
+    animation:
+    float 5s ease-in-out infinite;
+}
+
+.magic1 {
+
+    top: 15%;
+    left: 5%;
+
+    font-size: 35px;
+}
+
+.magic2 {
+
+    top: 25%;
+    right: 6%;
+
+    font-size: 40px;
+
+    animation-delay: 1s;
+}
+
+.magic3 {
+
+    top: 55%;
+    left: 8%;
+
+    font-size: 30px;
+
+    animation-delay: 2s;
+}
+
+.magic4 {
+
+    top: 65%;
+    right: 7%;
+
+    font-size: 34px;
+
+    animation-delay: 1.5s;
+}
+
+.magic5 {
+
+    top: 80%;
+    left: 18%;
+
+    font-size: 28px;
+
+    animation-delay: 3s;
+}
+
+.magic6 {
+
+    top: 45%;
+    right: 18%;
+
+    font-size: 25px;
+
+    animation-delay: 2.5s;
+}
+
+@keyframes float {
+
+    0%, 100% {
+
+        transform:
+        translateY(0)
+        rotate(0deg);
+    }
+
+    50% {
+
+        transform:
+        translateY(-25px)
+        rotate(15deg);
+    }
+
 }
 
 
@@ -54,91 +146,66 @@ body {
    ดาว
 ========================= */
 
-.star {
+.sparkle {
 
     position: fixed;
 
-    color: white;
+    z-index: 0;
 
-    font-size: 20px;
-
-    pointer-events: none;
+    color: #b477ed;
 
     animation:
-        twinkle 2.5s infinite ease-in-out;
-
-    z-index: 0;
+    sparkle 2.5s infinite alternate;
 }
 
-.s1 {
-    top: 12%;
-    left: 8%;
+.sp1 {
+
+    top: 18%;
+    left: 25%;
 }
 
-.s2 {
-    top: 25%;
-    right: 10%;
+.sp2 {
+
+    top: 35%;
+    right: 25%;
+
     animation-delay: .7s;
 }
 
-.s3 {
-    top: 55%;
-    left: 15%;
+.sp3 {
+
+    top: 70%;
+    left: 30%;
+
     animation-delay: 1.2s;
 }
 
-.s4 {
-    top: 75%;
-    right: 15%;
+.sp4 {
+
+    top: 85%;
+    right: 30%;
+
     animation-delay: 1.8s;
 }
 
-.s5 {
-    top: 42%;
-    right: 35%;
-    animation-delay: 2.2s;
-}
+@keyframes sparkle {
 
+    from {
 
-@keyframes twinkle {
-
-    0%,100% {
-
-        opacity: .25;
+        opacity: .3;
 
         transform:
-            scale(.8)
-            rotate(0deg);
+        scale(.7);
     }
 
-    50% {
+    to {
 
         opacity: 1;
 
         transform:
-            scale(1.3)
-            rotate(20deg);
+        scale(1.3);
     }
 
-}
-
-
-/* =========================
-   เนื้อหา
-========================= */
-
-.container {
-
-    position: relative;
-
-    z-index: 2;
-
-    width: min(850px,90%);
-
-    margin:
-        0 auto 60px;
-
-    text-align: center;
 }
 
 
@@ -146,27 +213,60 @@ body {
    หัวข้อ
 ========================= */
 
-.title {
+.header {
+
+    position: relative;
+
+    z-index: 2;
+
+    text-align: center;
+
+    padding: 55px 20px 25px;
+}
+
+.castle {
+
+    font-size: 75px;
+
+    margin-bottom: 10px;
+
+    animation:
+    castleFloat 4s ease-in-out infinite;
+}
+
+@keyframes castleFloat {
+
+    0%, 100% {
+
+        transform:
+        translateY(0);
+    }
+
+    50% {
+
+        transform:
+        translateY(-12px);
+    }
+
+}
+
+.header h1 {
 
     font-size: 42px;
 
-    margin:
-        55px 0 8px;
-
-    color: #704b82;
+    color: #704397;
 
     text-shadow:
-        0 4px 15px
-        rgba(125,80,150,.2);
+    2px 3px 10px #d1a9f1;
 }
 
-.subtitle {
+.header p {
 
-    font-size: 16px;
+    margin-top: 10px;
 
-    color: #9676a5;
+    font-size: 17px;
 
-    margin-bottom: 30px;
+    color: #9360b9;
 }
 
 
@@ -178,108 +278,39 @@ body {
 
     position: relative;
 
-    padding:
-        45px 50px;
+    z-index: 2;
 
-    text-align: left;
+    width: 88%;
+
+    max-width: 900px;
+
+    margin: 20px auto 40px;
+
+    padding: 40px;
 
     background:
-        linear-gradient(
-            135deg,
-            rgba(255,255,255,.78),
-            rgba(246,232,255,.72)
-        );
+    rgba(255,255,255,.88);
 
     border:
-        2px solid
-        rgba(255,255,255,.85);
+    3px solid #cba0ec;
 
-    border-radius: 32px;
+    border-radius: 30px;
 
     box-shadow:
-        0 15px 45px
-        rgba(115,75,145,.18),
-
-        inset 0 0 30px
-        rgba(255,255,255,.35);
-
-    backdrop-filter: blur(15px);
-
-    animation:
-        float 5s ease-in-out infinite;
+    0 10px 30px
+    rgba(91,55,125,.18);
 }
-
-
-.preface:before {
-
-    content: "✦";
-
-    position: absolute;
-
-    top: 18px;
-
-    right: 25px;
-
-    font-size: 28px;
-
-    color: #b996d0;
-}
-
-
-.preface:after {
-
-    content: "✧";
-
-    position: absolute;
-
-    bottom: 18px;
-
-    left: 25px;
-
-    font-size: 25px;
-
-    color: #b996d0;
-}
-
-
-@keyframes float {
-
-    0%,100% {
-
-        transform:
-            translateY(0);
-    }
-
-    50% {
-
-        transform:
-            translateY(-5px);
-    }
-
-}
-
-
-/* =========================
-   หัวข้อในกล่อง
-========================= */
 
 .preface h2 {
 
     text-align: center;
 
-    color: #79568a;
+    color: #704397;
 
-    margin-top: 0;
+    margin-bottom: 25px;
 
-    margin-bottom: 28px;
-
-    font-size: 25px;
+    font-size: 28px;
 }
-
-
-/* =========================
-   เนื้อหา
-========================= */
 
 .preface p {
 
@@ -287,96 +318,66 @@ body {
 
     line-height: 2;
 
-    margin:
-        0 0 22px;
+    margin-bottom: 18px;
 
-    color: #684d73;
+    text-align: left;
 }
 
 
 /* =========================
-   ลายเซ็น
-========================= */
-
-.signature {
-
-    text-align: right;
-
-    margin-top: 35px;
-
-    font-size: 17px;
-
-    color: #79568a;
-
-    line-height: 1.8;
-}
-
-
-/* =========================
-   ปุ่มกลับหน้าถัดไป
+   ปุ่มกลับหน้าแรก
 ========================= */
 
 .next-button {
 
-    margin-top: 40px;
+    position: relative;
+
+    z-index: 2;
 
     text-align: center;
-}
 
+    margin: 35px auto 50px;
+}
 
 .next-button a {
 
     display: inline-block;
 
-    padding:
-        13px 30px;
+    padding: 14px 30px;
 
     background:
-        #79509a;
+    linear-gradient(
+        135deg,
+        #704394,
+        #a875d1
+    );
 
     color: white;
 
     text-decoration: none;
 
-    border-radius: 25px;
+    border-radius: 30px;
 
-    font-size: 16px;
+    font-size: 17px;
 
     font-weight: bold;
 
     box-shadow:
-        0 7px 18px
-        rgba(100,65,130,.25);
+    0 8px 20px
+    rgba(91,55,125,.25);
 
     transition: .3s;
 }
 
-
 .next-button a:hover {
 
-    background:
-        #9870b8;
-
     transform:
-        translateY(-4px);
+    translateY(-5px)
+    scale(1.05);
 
     box-shadow:
-        0 10px 22px
-        rgba(100,65,130,.3);
-}
-
-
-/* =========================
-   ขอบคุณ
-========================= */
-
-.bottom {
-
-    margin-top: 25px;
-
-    color: #987ba8;
-
-    font-size: 14px;
+    0 12px 25px
+    rgba(91,55,125,.35);
 }
 
 
@@ -384,26 +385,35 @@ body {
    มือถือ
 ========================= */
 
-@media(max-width:600px) {
+@media (max-width: 600px) {
 
-    .title {
+    .castle {
+
+        font-size: 60px;
+    }
+
+    .header h1 {
 
         font-size: 32px;
-
-        margin-top: 40px;
     }
 
     .preface {
 
-        padding:
-            30px 24px;
+        width: 92%;
+
+        padding: 25px 20px;
+    }
+
+    .preface h2 {
+
+        font-size: 23px;
     }
 
     .preface p {
 
         font-size: 15px;
 
-        line-height: 1.9;
+        line-height: 1.8;
     }
 
 }
@@ -416,121 +426,93 @@ body {
 <body>
 
 
+<!-- ของตกแต่ง -->
+
+<div class="magic magic1">🦋</div>
+<div class="magic magic2">🌙</div>
+<div class="magic magic3">🌸</div>
+<div class="magic magic4">🧚🏻‍♀️</div>
+<div class="magic magic5">✨</div>
+<div class="magic magic6">💜</div>
+
+<div class="sparkle sp1">✦</div>
+<div class="sparkle sp2">✧</div>
+<div class="sparkle sp3">✦</div>
+<div class="sparkle sp4">✧</div>
+
+
 <!-- =========================
-     ดาว
+     หัวข้อ
 ========================= -->
 
-<div class="star s1">✦</div>
+<section class="header">
 
-<div class="star s2">✧</div>
+    <div class="castle">
+        🏰✨
+    </div>
 
-<div class="star s3">⋆</div>
-
-<div class="star s4">✦</div>
-
-<div class="star s5">✧</div>
-
-
-
-<!-- =========================
-     เนื้อหา
-========================= -->
-
-<div class="container">
-
-
-    <h1 class="title">
-        ✦ คำนำ ✦
+    <h1>
+        📖 คำนำ
     </h1>
 
+    <p>
+        ✨ Naweeya Dangniem ✨
+    </p>
 
-    <div class="subtitle">
-        Portfolio | Naweeya Dangniem
-    </div>
-
-
-
-    <!-- =========================
-         กล่องคำนำ
-    ========================== -->
-
-    <section class="preface">
+</section>
 
 
-        <h2>
-            ♡ แฟ้มสะสมผลงาน ♡
-        </h2>
+<!-- =========================
+     เนื้อหาคำนำ
+========================= -->
+
+<section class="preface">
+
+    <h2>
+        💜✨ คำนำ ✨💜
+    </h2>
+
+    <p>
+        แฟ้มสะสมผลงานเล่มนี้จัดทำขึ้นเพื่อรวบรวม
+        ประวัติการศึกษา ความสามารถ ผลงาน
+        กิจกรรม และประสบการณ์ต่าง ๆ
+        ของข้าพเจ้าในช่วงระดับชั้นมัธยมศึกษาตอนปลาย
+    </p>
+
+    <p>
+        ภายในแฟ้มสะสมผลงานเล่มนี้
+        ได้รวบรวมผลงานและกิจกรรมที่ข้าพเจ้า
+        ได้เข้าร่วมและภาคภูมิใจ
+        รวมถึงทักษะด้านการใช้เทคโนโลยี
+        และความสนใจทางด้านคอมพิวเตอร์
+    </p>
+
+    <p>
+        ข้าพเจ้าหวังว่าแฟ้มสะสมผลงานเล่มนี้
+        จะช่วยแสดงให้เห็นถึงความตั้งใจ
+        ความสามารถ และพัฒนาการของข้าพเจ้า
+        รวมถึงเป็นส่วนหนึ่งในการแนะนำตัว
+        เพื่อใช้ประกอบการศึกษาต่อในระดับมหาวิทยาลัย
+    </p>
+
+    <p>
+        สุดท้ายนี้ ขอขอบคุณคุณครู ครอบครัว
+        และทุกคนที่คอยสนับสนุนและให้คำแนะนำ
+        จนทำให้แฟ้มสะสมผลงานเล่มนี้สำเร็จลุล่วงไปได้ด้วยดีค่ะ 💜
+    </p>
+
+</section>
 
 
-        <p>
+<!-- =========================
+     กลับหน้าแรก
+========================= -->
 
-            แฟ้มสะสมผลงาน (Portfolio) เล่มนี้ จัดทำขึ้นเพื่อรวบรวม
-            ประวัติส่วนตัว ประวัติการศึกษา ความรู้ ความสามารถ กิจกรรม
-            และผลงานต่าง ๆ ที่หนูได้ตั้งใจศึกษาและสร้างสรรค์ขึ้นตลอดช่วงที่ผ่านมา
-            โดยต้องการแสดงให้เห็นถึงความตั้งใจ ความพยายาม
-            และพัฒนาการของหนูในด้านต่าง ๆ
+<div class="next-button">
 
-        </p>
-
-
-        <p>
-
-            หนูหวังว่าแฟ้มสะสมผลงานเล่มนี้จะช่วยสะท้อนตัวตน
-            ความสนใจ ความสามารถ และเป้าหมายในการศึกษาต่อ
-            รวมถึงเป็นส่วนหนึ่งในการประกอบการพิจารณาเข้าศึกษาต่อ
-            ในระดับอุดมศึกษา
-
-        </p>
-
-
-        <p>
-
-            สุดท้ายนี้ หนูขอขอบคุณคุณครู ผู้ปกครอง และทุกคนที่คอยสนับสนุน
-            และให้คำแนะนำ ตลอดจนเป็นกำลังใจในการเรียนและการทำกิจกรรมต่าง ๆ
-            ซึ่งเป็นส่วนสำคัญที่ทำให้หนูได้พัฒนาตัวเอง
-            และมีผลงานต่าง ๆ ที่นำมารวบรวมไว้ในแฟ้มสะสมผลงานเล่มนี้
-
-        </p>
-
-
-
-        <div class="signature">
-
-            ด้วยความขอบคุณ<br>
-
-            <b>นวียา แดงเนียม</b><br>
-
-            นักเรียนชั้นมัธยมศึกษาปีที่ 6
-
-        </div>
-
-
-    </section>
-
-
-
-    <!-- =========================
-         ปุ่มหน้าถัดไป
-    ========================== -->
-
-    <div class="next-button">
-
-        <a href="education.html">
-            🎓 หน้าถัดไป
-        </a>
-
-    </div>
-
-
-
-    <!-- ขอบคุณ -->
-
-    <div class="bottom">
-
-        ✧ ขอบคุณที่เข้ามาเยี่ยมชม Portfolio ของหนูนะคะ ♡ ✧
-
-    </div>
-
+    <a href="index.html">
+        🏰 กลับหน้าแรก
+    </a>
 
 </div>
 
