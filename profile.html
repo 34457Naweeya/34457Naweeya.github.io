@@ -1,137 +1,266 @@
 <!DOCTYPE html>
 <html lang="th">
 <head>
+
 <meta charset="UTF-8">
+
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
 <title>แนะนำตัว | Naweeya Dangniem</title>
 
-<link href="https://fonts.googleapis.com/css2?family=Itim&family=Mali:wght@400;500;600;700&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Itim&family=Sarabun:wght@300;400;500;600;700&display=swap" rel="stylesheet">
 
 <style>
+
 *{
     box-sizing:border-box;
 }
 
 body{
+
     margin:0;
-    font-family:'Mali',sans-serif;
-    background:linear-gradient(135deg,#f4eaff,#ead8ff,#faf2ff);
+
+    font-family:'Sarabun',sans-serif;
+
+    background:linear-gradient(
+        135deg,
+        #f5eaff,
+        #ead8ff,
+        #faf2ff
+    );
+
     color:#633b7b;
+
     min-height:100vh;
+
     overflow-x:hidden;
 }
 
+
+/* ของตกแต่ง */
+
 .sparkle{
+
     position:fixed;
+
     font-size:26px;
+
     animation:float 5s ease-in-out infinite;
+
     pointer-events:none;
 }
 
-.s1{top:10%;left:7%;}
-.s2{top:25%;right:8%;animation-delay:1s;}
-.s3{bottom:20%;left:10%;animation-delay:2s;}
-.s4{bottom:12%;right:12%;animation-delay:3s;}
+.s1{
+    top:10%;
+    left:7%;
+}
+
+.s2{
+    top:25%;
+    right:8%;
+    animation-delay:1s;
+}
+
+.s3{
+    bottom:20%;
+    left:10%;
+    animation-delay:2s;
+}
+
+.s4{
+    bottom:12%;
+    right:12%;
+    animation-delay:3s;
+}
 
 @keyframes float{
+
     0%,100%{
         transform:translateY(0) rotate(0deg);
     }
+
     50%{
         transform:translateY(-20px) rotate(15deg);
     }
+
 }
 
+
+/* กล่องทั้งหมด */
+
 .container{
+
     max-width:850px;
+
     margin:50px auto;
+
     padding:20px;
+
     position:relative;
+
     z-index:2;
 }
 
+
+/* หัวข้อ */
+
 .title{
+
     text-align:center;
+
     font-family:'Itim',cursive;
+
     font-size:45px;
+
     color:#70458d;
+
     margin-bottom:30px;
+
 }
+
+
+/* กล่องแนะนำตัว */
 
 .profile-card{
+
     background:rgba(255,255,255,0.88);
+
     border:3px solid #d8b9eb;
+
     border-radius:30px;
+
     padding:35px;
-    box-shadow:0 10px 30px rgba(100,60,130,0.18);
+
+    box-shadow:
+        0 10px 30px rgba(100,60,130,0.18);
 }
+
+
+/* รูป */
 
 .profile-img{
+
     width:170px;
+
     height:170px;
+
     object-fit:cover;
+
     border-radius:50%;
+
     display:block;
+
     margin:0 auto 25px;
+
     border:6px solid white;
-    box-shadow:0 7px 20px rgba(100,60,130,0.25);
+
+    box-shadow:
+        0 7px 20px rgba(100,60,130,0.25);
 }
 
+
+/* ชื่อ */
+
 .name{
+
     text-align:center;
+
     font-family:'Itim',cursive;
+
     font-size:32px;
+
     color:#754a91;
+
     margin-bottom:25px;
 }
 
+
+/* ข้อมูล */
+
 .info{
+
     background:#faf4ff;
+
     border:2px solid #e1c9ef;
+
     border-radius:20px;
+
     padding:20px 25px;
+
     line-height:1.9;
-    font-size:17px;
+
+    font-size:18px;
 }
 
 .info p{
-    margin:7px 0;
+    margin:8px 0;
 }
 
 .highlight{
+
     color:#7d4b99;
+
     font-weight:700;
 }
 
+
+/* ปุ่มกลับ */
+
 .back{
+
     text-align:center;
+
     margin-top:30px;
 }
 
 .back a{
+
     display:inline-block;
+
     text-decoration:none;
+
     color:white;
+
     background:#9b6aba;
+
     padding:12px 25px;
+
     border-radius:25px;
-    box-shadow:0 5px 15px rgba(100,60,130,0.2);
+
+    box-shadow:
+        0 5px 15px rgba(100,60,130,0.2);
+
     transition:0.3s;
 }
 
 .back a:hover{
+
     transform:translateY(-4px);
+
     background:#81539d;
 }
 
+
+/* ขอบคุณ */
+
 .thanks{
+
     text-align:center;
+
     margin-top:30px;
+
     font-family:'Itim',cursive;
-    font-size:27px;
+
+    font-size:30px;
+
+    color:#80529a;
 }
 
+
+/* มือถือ */
+
 @media(max-width:600px){
+
     .title{
         font-size:36px;
     }
@@ -141,59 +270,131 @@ body{
     }
 
     .info{
-        font-size:15px;
+
+        font-size:16px;
+
         padding:17px;
     }
+
 }
+
 </style>
+
 </head>
 
 <body>
 
+
 <div class="sparkle s1">✨</div>
+
 <div class="sparkle s2">🦋</div>
+
 <div class="sparkle s3">🌸</div>
+
 <div class="sparkle s4">🌙</div>
 
+
 <div class="container">
+
 
     <div class="title">
         👩🏻‍💻 แนะนำตัว ✨
     </div>
 
+
     <div class="profile-card">
 
-        <img src="profile.jpg" class="profile-img">
+
+        <img
+            src="profile.jpg"
+            class="profile-img"
+        >
+
 
         <div class="name">
             Naweeya Dangniem
         </div>
 
+
         <div class="info">
 
-            <p>🌷 <span class="highlight">ชื่อ :</span> นวียา แดงเนียม</p>
 
-            <p>💜 <span class="highlight">ชื่อเล่น :</span> เหนือ</p>
+            <p>
+                🌷
+                <span class="highlight">
+                    ชื่อ :
+                </span>
+                นวียา แดงเนียม
+            </p>
 
-            <p>🎓 <span class="highlight">ระดับการศึกษา :</span> ชั้นมัธยมศึกษาปีที่ 6</p>
 
-            <p>🏫 <span class="highlight">แผนการเรียน :</span> วิทย์-คณิต เตรียมวิศวะ (Pre-Engineering)</p>
+            <p>
+                💜
+                <span class="highlight">
+                    ชื่อเล่น :
+                </span>
+                เหนือ
+            </p>
 
-            <p>💻 <span class="highlight">ความสนใจ :</span> คอมพิวเตอร์ เทคโนโลยี การเขียนโปรแกรม และวิศวกรรม</p>
 
-            <p>🚀 <span class="highlight">ความฝัน :</span> ศึกษาต่อในด้านวิศวกรรมคอมพิวเตอร์ และพัฒนาความรู้ด้านเทคโนโลยีเพื่อนำไปใช้ในอนาคต</p>
+            <p>
+                🎓
+                <span class="highlight">
+                    ระดับการศึกษา :
+                </span>
+                ชั้นมัธยมศึกษาปีที่ 6
+            </p>
+
+
+            <p>
+                🏫
+                <span class="highlight">
+                    แผนการเรียน :
+                </span>
+                วิทย์-คณิต เตรียมวิศวะ
+                (Pre-Engineering)
+            </p>
+
+
+            <p>
+                💻
+                <span class="highlight">
+                    ความสนใจ :
+                </span>
+                คอมพิวเตอร์ เทคโนโลยี
+                การเขียนโปรแกรม และวิศวกรรม
+            </p>
+
+
+            <p>
+                🚀
+                <span class="highlight">
+                    ความฝัน :
+                </span>
+                ศึกษาต่อด้านวิศวกรรมคอมพิวเตอร์
+                และพัฒนาความรู้ด้านเทคโนโลยี
+                เพื่อนำไปใช้ในอนาคต
+            </p>
+
 
         </div>
 
     </div>
 
+
     <div class="back">
-        <a href="index.html">🏰 กลับหน้าแรก</a>
+
+        <a href="index.html">
+            🏰 กลับหน้าแรก
+        </a>
+
     </div>
+
 
     <div class="thanks">
         ขอบคุณ 💜
     </div>
+
 
 </div>
 
