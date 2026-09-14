@@ -3,24 +3,26 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
 <title>Naweeya Dangniem | Portfolio</title>
 
-<link href="https://fonts.googleapis.com/css2?family=Itim&family=Mali:wght@400;500;600;700&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Itim&family=Sarabun:wght@300;400;500;600;700&display=swap" rel="stylesheet">
 
 <style>
+
 *{
     box-sizing:border-box;
 }
 
 body{
     margin:0;
-    font-family:'Mali', sans-serif;
-    background:linear-gradient(135deg,#f4eaff,#ead8ff,#f8efff);
+    font-family:'Sarabun',sans-serif;
+    background:linear-gradient(135deg,#f5eaff,#ead8ff,#faf2ff);
     color:#633b7b;
     overflow-x:hidden;
 }
 
-/* ดาวและของตกแต่ง */
+/* ของตกแต่งลอย */
 .sparkle{
     position:fixed;
     font-size:25px;
@@ -29,164 +31,268 @@ body{
     pointer-events:none;
 }
 
-.s1{top:12%;left:6%;}
-.s2{top:25%;right:8%;animation-delay:1s;}
-.s3{bottom:18%;left:10%;animation-delay:2s;}
-.s4{bottom:10%;right:12%;animation-delay:3s;}
-.s5{top:55%;left:48%;animation-delay:1.5s;}
+.s1{
+    top:12%;
+    left:6%;
+}
+
+.s2{
+    top:25%;
+    right:8%;
+    animation-delay:1s;
+}
+
+.s3{
+    bottom:18%;
+    left:10%;
+    animation-delay:2s;
+}
+
+.s4{
+    bottom:10%;
+    right:12%;
+    animation-delay:3s;
+}
+
+.s5{
+    top:55%;
+    left:48%;
+    animation-delay:1.5s;
+}
 
 @keyframes float{
+
     0%,100%{
         transform:translateY(0) rotate(0deg);
     }
+
     50%{
         transform:translateY(-20px) rotate(15deg);
     }
+
 }
 
 /* เมนูด้านบน */
+
 nav{
     position:relative;
     z-index:5;
+
     display:flex;
     justify-content:center;
     flex-wrap:wrap;
+
     gap:10px;
+
     padding:18px 12px;
+
     background:rgba(255,255,255,0.65);
+
     backdrop-filter:blur(10px);
+
     box-shadow:0 4px 18px rgba(110,70,140,0.15);
 }
 
 nav a{
     text-decoration:none;
+
     color:#6d4385;
+
     background:#fff7ff;
+
     border:2px solid #d9b8ed;
+
     padding:9px 15px;
+
     border-radius:25px;
+
     font-size:14px;
+
     font-weight:600;
+
     transition:0.3s;
 }
 
 nav a:hover{
     background:#dcbcf2;
+
     color:white;
+
     transform:translateY(-3px);
 }
 
 /* ส่วนหัว */
+
 .hero{
     position:relative;
     z-index:1;
+
     text-align:center;
+
     padding:55px 20px 35px;
 }
 
 .hero h1{
     margin:0;
+
     font-family:'Itim',cursive;
+
     font-size:48px;
+
     color:#70458d;
+
     text-shadow:2px 3px 0 #ead5f7;
 }
 
 .hero h2{
     margin:10px 0;
-    font-size:23px;
+
+    font-family:'Itim',cursive;
+
+    font-size:25px;
+
     color:#9363ad;
 }
 
 .hero p{
-    font-size:17px;
+    font-size:18px;
+
     margin-top:15px;
 }
 
 /* รูปโปรไฟล์ */
+
 .profile{
     width:180px;
     height:180px;
+
     object-fit:cover;
+
     border-radius:50%;
+
     border:6px solid white;
+
     box-shadow:0 8px 25px rgba(100,60,130,0.25);
+
     margin:20px auto;
+
     display:block;
 }
 
 /* การ์ด */
+
 .cards{
     position:relative;
     z-index:2;
+
     max-width:1050px;
+
     margin:10px auto 50px;
+
     padding:20px;
+
     display:grid;
+
     grid-template-columns:repeat(3,1fr);
+
     gap:22px;
 }
 
 .card{
     text-decoration:none;
+
     color:#633b7b;
-    background:rgba(255,255,255,0.82);
+
+    background:rgba(255,255,255,0.86);
+
     border:3px solid #d8b9eb;
+
     border-radius:25px;
+
     padding:30px 18px;
+
     text-align:center;
+
     min-height:150px;
+
     display:flex;
+
     flex-direction:column;
+
     justify-content:center;
+
     box-shadow:0 7px 20px rgba(112,70,140,0.15);
+
     transition:0.35s;
 }
 
 .card:hover{
+
     transform:translateY(-8px) scale(1.02);
+
     box-shadow:0 12px 28px rgba(112,70,140,0.25);
+
     background:#fffaff;
 }
 
 .card .emoji{
     font-size:42px;
+
     margin-bottom:10px;
 }
 
 .card h3{
     margin:0;
+
+    font-family:'Sarabun',sans-serif;
+
     font-size:20px;
+
+    font-weight:700;
+
     color:#70458d;
 }
 
 .card p{
     margin:8px 0 0;
-    font-size:14px;
+
+    font-size:15px;
+
     color:#9871aa;
 }
 
 /* ขอบคุณ */
+
 .thanks{
     position:relative;
     z-index:2;
+
     text-align:center;
+
     padding:20px 20px 45px;
+
     font-family:'Itim',cursive;
-    font-size:28px;
+
+    font-size:30px;
+
     color:#80529a;
 }
 
 /* มือถือ */
+
 @media(max-width:800px){
+
     .cards{
         grid-template-columns:repeat(2,1fr);
     }
+
 }
 
 @media(max-width:550px){
+
     nav a{
         font-size:12px;
+
         padding:7px 10px;
     }
 
@@ -195,46 +301,67 @@ nav a:hover{
     }
 
     .hero h2{
-        font-size:19px;
+        font-size:22px;
     }
 
     .cards{
         grid-template-columns:1fr;
+
         padding:15px;
     }
+
 }
+
 </style>
 </head>
 
 <body>
 
-<!-- ของตกแต่งลอย -->
+<!-- ของตกแต่ง -->
+
 <div class="sparkle s1">✨</div>
 <div class="sparkle s2">🦋</div>
 <div class="sparkle s3">🌸</div>
 <div class="sparkle s4">🌙</div>
 <div class="sparkle s5">💜</div>
 
-<!-- เมนู -->
+
+<!-- เมนูด้านบน -->
+
 <nav>
+
     <a href="index.html">🏰 หน้าหลัก</a>
+
     <a href="portfolio.html">📖 คำนำ</a>
+
     <a href="profile.html">👩🏻‍💻 แนะนำตัว</a>
+
     <a href="education.html">🎓 การศึกษา</a>
+
     <a href="future.html">🔮 อนาคต</a>
+
     <a href="proud.html">🏆 ผลงานที่ภูมิใจ</a>
+
     <a href="skills.html">💻 ความสามารถพิเศษ</a>
+
     <a href="project.html">🧪 โครงงาน / ชิ้นงาน</a>
+
 </nav>
 
-<!-- หัวเว็บ -->
+
+<!-- ส่วนหัว -->
+
 <section class="hero">
 
     <img src="profile.jpg" class="profile">
 
-    <h1>Naweeya Dangniem</h1>
+    <h1>
+        Naweeya Dangniem
+    </h1>
 
-    <h2>✨ Portfolio ✨</h2>
+    <h2>
+        ✨ Portfolio ✨
+    </h2>
 
     <p>
         แฟ้มสะสมผลงานของ นวียา แดงเนียม (เหนือ)
@@ -242,52 +369,117 @@ nav a:hover{
 
 </section>
 
-<!-- การ์ดเมนู -->
+
+<!-- การ์ด -->
+
 <section class="cards">
 
     <a href="portfolio.html" class="card">
+
         <div class="emoji">📖</div>
-        <h3>คำนำ</h3>
-        <p>Preface</p>
+
+        <h3>
+            คำนำ
+        </h3>
+
+        <p>
+            Preface
+        </p>
+
     </a>
+
 
     <a href="profile.html" class="card">
+
         <div class="emoji">👩🏻‍💻</div>
-        <h3>แนะนำตัว</h3>
-        <p>About Me</p>
+
+        <h3>
+            แนะนำตัว
+        </h3>
+
+        <p>
+            About Me
+        </p>
+
     </a>
+
 
     <a href="education.html" class="card">
+
         <div class="emoji">🎓</div>
-        <h3>ประวัติการศึกษา</h3>
-        <p>Education</p>
+
+        <h3>
+            ประวัติการศึกษา
+        </h3>
+
+        <p>
+            Education
+        </p>
+
     </a>
+
 
     <a href="future.html" class="card">
+
         <div class="emoji">🔮</div>
-        <h3>มหาวิทยาลัยที่อยากเข้า</h3>
-        <p>Future University</p>
+
+        <h3>
+            มหาวิทยาลัยที่อยากเข้า
+        </h3>
+
+        <p>
+            Future University
+        </p>
+
     </a>
+
 
     <a href="proud.html" class="card">
+
         <div class="emoji">🏆</div>
-        <h3>ผลงานที่ภูมิใจ</h3>
-        <p>My Achievements</p>
+
+        <h3>
+            ผลงานที่ภูมิใจ
+        </h3>
+
+        <p>
+            My Achievements
+        </p>
+
     </a>
+
 
     <a href="skills.html" class="card">
+
         <div class="emoji">💻</div>
-        <h3>ความสามารถพิเศษ</h3>
-        <p>Skills</p>
+
+        <h3>
+            ความสามารถพิเศษ
+        </h3>
+
+        <p>
+            Skills
+        </p>
+
     </a>
 
+
     <a href="project.html" class="card">
+
         <div class="emoji">🧪</div>
-        <h3>โครงงาน / ชิ้นงาน</h3>
-        <p>Projects</p>
+
+        <h3>
+            โครงงาน / ชิ้นงาน
+        </h3>
+
+        <p>
+            Projects
+        </p>
+
     </a>
 
 </section>
+
 
 <div class="thanks">
     ขอบคุณ 💜
