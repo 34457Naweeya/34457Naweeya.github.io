@@ -1,0 +1,403 @@
+<!DOCTYPE html>
+<html lang="th">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>ความสามารถพิเศษ | Naweeya Dangniem</title>
+
+    <style>
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            font-family: "Trebuchet MS", sans-serif;
+            background: linear-gradient(135deg, #f4eaff, #e4ceff, #faf3ff);
+            min-height: 100vh;
+            color: #4b2673;
+            overflow-x: hidden;
+        }
+
+        /* ดาวตกแต่ง */
+        .star {
+            position: fixed;
+            color: #a86fe8;
+            font-size: 22px;
+            z-index: 0;
+            animation: float 4s ease-in-out infinite;
+        }
+
+        .s1 {
+            top: 15%;
+            left: 8%;
+        }
+
+        .s2 {
+            top: 28%;
+            right: 8%;
+            animation-delay: 1s;
+        }
+
+        .s3 {
+            top: 70%;
+            left: 12%;
+            animation-delay: 2s;
+        }
+
+        .s4 {
+            top: 82%;
+            right: 15%;
+            animation-delay: 1.5s;
+        }
+
+        @keyframes float {
+            0%, 100% {
+                transform: translateY(0) rotate(0deg);
+            }
+
+            50% {
+                transform: translateY(-18px) rotate(15deg);
+            }
+        }
+
+        /* แถบด้านบน */
+        nav {
+            position: sticky;
+            top: 0;
+            z-index: 10;
+            background: rgba(108, 65, 150, 0.96);
+            padding: 15px;
+            text-align: center;
+            box-shadow: 0 4px 15px rgba(75, 38, 115, 0.25);
+        }
+
+        nav a {
+            display: inline-block;
+            color: white;
+            text-decoration: none;
+            padding: 10px 17px;
+            margin: 4px;
+            border-radius: 25px;
+            font-weight: bold;
+            transition: 0.3s;
+        }
+
+        nav a:hover {
+            background: #dfc2ff;
+            color: #4b2673;
+            transform: translateY(-3px);
+        }
+
+        /* หัวข้อ */
+        .header {
+            position: relative;
+            z-index: 1;
+            text-align: center;
+            padding: 60px 20px 35px;
+        }
+
+        .header .icon {
+            font-size: 75px;
+            animation: bounce 3s ease-in-out infinite;
+        }
+
+        @keyframes bounce {
+            0%, 100% {
+                transform: translateY(0);
+            }
+
+            50% {
+                transform: translateY(-12px);
+            }
+        }
+
+        .header h1 {
+            margin-top: 15px;
+            font-size: 42px;
+            color: #6c4196;
+            text-shadow: 2px 2px 8px #d5b5ff;
+        }
+
+        .header p {
+            margin-top: 10px;
+            font-size: 18px;
+            color: #8055a8;
+        }
+
+        /* กล่องความสามารถ */
+        .skills-container {
+            position: relative;
+            z-index: 1;
+            width: 90%;
+            max-width: 1000px;
+            margin: 10px auto 50px;
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 25px;
+        }
+
+        .skill-box {
+            background: rgba(255, 255, 255, 0.85);
+            border: 3px solid #c79bea;
+            border-radius: 28px;
+            padding: 30px;
+            box-shadow: 0 8px 25px rgba(100, 60, 140, 0.18);
+            transition: 0.3s;
+        }
+
+        .skill-box:hover {
+            transform: translateY(-8px);
+            box-shadow: 0 14px 30px rgba(100, 60, 140, 0.25);
+        }
+
+        .skill-title {
+            text-align: center;
+            margin-bottom: 25px;
+        }
+
+        .skill-title .emoji {
+            font-size: 48px;
+        }
+
+        .skill-title h2 {
+            margin-top: 8px;
+            color: #70409b;
+            font-size: 25px;
+        }
+
+        /* รายการความสามารถ */
+        .skill-list {
+            list-style: none;
+        }
+
+        .skill-list li {
+            background: #f3e5ff;
+            margin: 12px 0;
+            padding: 13px 16px;
+            border-radius: 18px;
+            color: #573078;
+            font-size: 16px;
+            transition: 0.25s;
+        }
+
+        .skill-list li:hover {
+            background: #e5caff;
+            transform: translateX(6px);
+        }
+
+        /* กล่องโปรแกรม */
+        .programs {
+            position: relative;
+            z-index: 1;
+            width: 90%;
+            max-width: 1000px;
+            margin: 0 auto 45px;
+            background: rgba(255,255,255,0.8);
+            border: 3px solid #c79bea;
+            border-radius: 28px;
+            padding: 30px;
+            text-align: center;
+            box-shadow: 0 8px 25px rgba(100, 60, 140, 0.15);
+        }
+
+        .programs h2 {
+            color: #70409b;
+            margin-bottom: 20px;
+        }
+
+        .program-item {
+            display: inline-block;
+            background: #ead7ff;
+            color: #573078;
+            padding: 12px 20px;
+            margin: 7px;
+            border-radius: 25px;
+            font-weight: bold;
+            transition: 0.3s;
+        }
+
+        .program-item:hover {
+            background: #d3aaff;
+            transform: scale(1.05);
+        }
+
+        /* ปุ่มกลับ */
+        .back {
+            position: relative;
+            z-index: 1;
+            text-align: center;
+            margin-bottom: 25px;
+        }
+
+        .back a {
+            display: inline-block;
+            text-decoration: none;
+            background: #8055a8;
+            color: white;
+            padding: 12px 25px;
+            border-radius: 25px;
+            transition: 0.3s;
+        }
+
+        .back a:hover {
+            background: #a875d2;
+            transform: translateY(-3px);
+        }
+
+        /* ขอบคุณ */
+        .thanks {
+            text-align: center;
+            margin: 35px 0;
+            color: #70409b;
+            font-size: 18px;
+        }
+
+        @media (max-width: 600px) {
+
+            .header h1 {
+                font-size: 32px;
+            }
+
+            nav a {
+                padding: 8px 10px;
+                font-size: 12px;
+            }
+
+            .skills-container {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <!-- ดาวตกแต่ง -->
+    <div class="star s1">✦</div>
+    <div class="star s2">✧</div>
+    <div class="star s3">✦</div>
+    <div class="star s4">✧</div>
+
+    <!-- แท็บด้านบน -->
+    <nav>
+        <a href="index.html">หน้าหลัก</a>
+        <a href="introduction.html">คำนำ</a>
+        <a href="about.html">แนะนำตัว</a>
+        <a href="education.html">ประวัติการศึกษา</a>
+        <a href="university.html">มหาวิทยาลัยที่อยากเข้า</a>
+        <a href="works.html">ผลงาน</a>
+        <a href="skills.html">ความสามารถพิเศษ</a>
+        <a href="projects.html">โครงงาน / ชิ้นงาน</a>
+        <a href="contact.html">ช่องทางการติดต่อ</a>
+    </nav>
+
+    <!-- หัวข้อ -->
+    <section class="header">
+
+        <div class="icon">💜✨💻</div>
+
+        <h1>ความสามารถพิเศษ</h1>
+
+        <p>
+            Skills & Computer Abilities
+        </p>
+
+    </section>
+
+    <!-- กล่องความสามารถ -->
+    <section class="skills-container">
+
+        <!-- การเขียนโค้ด -->
+        <div class="skill-box">
+
+            <div class="skill-title">
+                <div class="emoji">👩🏻‍💻✨</div>
+
+                <h2>ความสามารถด้านการเขียนโค้ด</h2>
+            </div>
+
+            <ul class="skill-list">
+
+                <li>💜 สามารถเขียนภาษา HTML ได้</li>
+
+                <li>🎀 สามารถตกแต่งเว็บไซต์ด้วย CSS ได้</li>
+
+                <li>✨ สามารถออกแบบหน้าเว็บไซต์เบื้องต้นได้</li>
+
+                <li>🌷 สามารถจัดโครงสร้างหน้าเว็บไซต์ได้</li>
+
+                <li>💻 สามารถสร้างเว็บไซต์ Portfolio ได้</li>
+
+                <li>🪄 สามารถแก้ไขและปรับแต่งโค้ดเบื้องต้นได้</li>
+
+            </ul>
+
+        </div>
+
+
+        <!-- การใช้โปรแกรม -->
+        <div class="skill-box">
+
+            <div class="skill-title">
+                <div class="emoji">🖥️🌸</div>
+
+                <h2>ความสามารถด้านการใช้โปรแกรม</h2>
+            </div>
+
+            <ul class="skill-list">
+
+                <li>💻 สามารถใช้งาน GitHub เบื้องต้นได้</li>
+
+                <li>🏰 สามารถใช้ Autodesk 3ds Max ในการสร้างโมเดล 3D ได้</li>
+
+                <li>🎨 สามารถออกแบบและตกแต่งชิ้นงานได้</li>
+
+                <li>📁 สามารถจัดการไฟล์และโปรเจกต์ต่าง ๆ ได้</li>
+
+                <li>✨ สามารถเรียนรู้และทดลองใช้โปรแกรมใหม่ ๆ ได้</li>
+
+            </ul>
+
+        </div>
+
+    </section>
+
+
+    <!-- โปรแกรมที่สามารถใช้ -->
+    <section class="programs">
+
+        <h2>🌷 โปรแกรมและเทคโนโลยีที่เคยใช้ 🌷</h2>
+
+        <div class="program-item">💻 HTML</div>
+
+        <div class="program-item">🎨 CSS</div>
+
+        <div class="program-item">🐙 GitHub</div>
+
+        <div class="program-item">🏰 Autodesk 3ds Max</div>
+
+        <div class="program-item">📄 Microsoft Office</div>
+
+    </section>
+
+
+    <!-- ปุ่มกลับ -->
+    <div class="back">
+
+        <a href="index.html">
+            🏠 กลับหน้าหลัก
+        </a>
+
+    </div>
+
+
+    <!-- ขอบคุณ -->
+    <div class="thanks">
+        ขอบคุณที่เข้าชมแฟ้มสะสมผลงานนะคะ 💜✨
+    </div>
+
+</body>
+</html>
