@@ -1,330 +1,303 @@
 <!DOCTYPE html>
 <html lang="th">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Naweeya Dangniem | Portfolio</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Naweeya Dangniem | Portfolio</title>
 
-<link href="https://fonts.googleapis.com/css2?family=Itim&family=Mali:wght@400;500;600&display=swap" rel="stylesheet">
+    <style>
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
 
-<style>
-*{box-sizing:border-box}
+        body {
+            font-family: "Trebuchet MS", sans-serif;
+            background: linear-gradient(135deg, #f4eaff, #e6d2ff, #f9f0ff);
+            min-height: 100vh;
+            color: #4b2673;
+            overflow-x: hidden;
+        }
 
-body{
-    margin:0;
-    min-height:100vh;
-    font-family:'Mali',sans-serif;
-    color:#6b4b7d;
-    text-align:center;
-    background:linear-gradient(135deg,#eee3ff,#d9c4f7,#f4eaff,#dfcaf7,#f6edff);
-    background-size:300% 300%;
-    animation:bg 14s ease infinite;
-}
+        /* ดาวพื้นหลัง */
+        .star {
+            position: fixed;
+            color: #b77cff;
+            font-size: 20px;
+            animation: float 4s ease-in-out infinite;
+            z-index: 0;
+        }
 
-@keyframes bg{
-    0%,100%{background-position:0 50%}
-    50%{background-position:100% 50%}
-}
+        .s1 { top: 15%; left: 8%; }
+        .s2 { top: 30%; right: 10%; animation-delay: 1s; }
+        .s3 { top: 70%; left: 15%; animation-delay: 2s; }
+        .s4 { top: 80%; right: 15%; animation-delay: 1.5s; }
 
-/* แถบด้านบน */
-.top-nav{
-    position:sticky;
-    top:12px;
-    z-index:100;
-    width:min(900px,92%);
-    margin:12px auto 25px;
-    padding:9px;
-    display:flex;
-    justify-content:center;
-    flex-wrap:wrap;
-    gap:6px;
-    background:rgba(255,255,255,.58);
-    border:1.5px solid rgba(255,255,255,.9);
-    border-radius:22px;
-    box-shadow:0 8px 25px rgba(120,80,150,.16);
-    backdrop-filter:blur(12px);
-}
+        @keyframes float {
+            0%, 100% {
+                transform: translateY(0) rotate(0deg);
+            }
+            50% {
+                transform: translateY(-20px) rotate(15deg);
+            }
+        }
 
-.top-nav a{
-    color:#6b4b7d;
-    text-decoration:none;
-    padding:9px 13px;
-    border-radius:16px;
-    font-size:13px;
-    transition:.25s;
-}
+        /* แท็บด้านบน */
+        nav {
+            position: sticky;
+            top: 0;
+            z-index: 10;
+            background: rgba(108, 65, 150, 0.95);
+            padding: 15px;
+            text-align: center;
+            box-shadow: 0 4px 15px rgba(75, 38, 115, 0.25);
+        }
 
-.top-nav a:hover{
-    background:rgba(220,195,250,.7);
-    transform:translateY(-2px);
-}
+        nav a {
+            display: inline-block;
+            color: white;
+            text-decoration: none;
+            padding: 10px 18px;
+            margin: 4px;
+            border-radius: 25px;
+            font-weight: bold;
+            transition: 0.3s;
+        }
 
-.container{
-    width:min(900px,92%);
-    margin:auto;
-    padding-bottom:50px;
-}
+        nav a:hover {
+            background: #d9b8ff;
+            color: #4b2673;
+            transform: translateY(-3px);
+        }
 
-/* รูปโปรไฟล์ */
-.profile{
-    width:170px;
-    height:170px;
-    margin:25px auto 15px;
-    border-radius:50%;
-    padding:8px;
-    background:linear-gradient(135deg,#fff,#d8b9ff,#fff);
-    box-shadow:0 0 25px #c9a5ee,0 0 60px #fff;
-}
+        /* หน้าหลัก */
+        .hero {
+            position: relative;
+            z-index: 1;
+            text-align: center;
+            padding: 80px 20px 50px;
+        }
 
-.profile img{
-    width:100%;
-    height:100%;
-    border-radius:50%;
-    object-fit:cover;
-    border:5px solid rgba(255,255,255,.8);
-}
+        .hero h1 {
+            font-size: 48px;
+            color: #6c4196;
+            text-shadow: 2px 2px 8px #d4b1ff;
+        }
 
-h1{
-    font-family:'Itim',cursive;
-    font-size:46px;
-    color:#684477;
-    margin:10px 0 0;
-}
+        .hero h2 {
+            margin-top: 10px;
+            font-size: 22px;
+            color: #8055a8;
+        }
 
-.portfolio-title{
-    font:27px 'Itim';
-    color:#a178b5;
-}
+        .castle {
+            font-size: 80px;
+            margin-bottom: 20px;
+            animation: castleFloat 3s ease-in-out infinite;
+        }
 
-.subtitle{
-    margin:7px;
-    color:#80628d;
-}
+        @keyframes castleFloat {
+            0%, 100% {
+                transform: translateY(0);
+            }
+            50% {
+                transform: translateY(-10px);
+            }
+        }
 
-/* แนะนำตัว */
-.intro-card{
-    max-width:700px;
-    margin:25px auto;
-    padding:25px;
-    border-radius:30px;
-    background:rgba(255,255,255,.62);
-    border:1.5px solid rgba(255,255,255,.9);
-    box-shadow:0 12px 35px rgba(132,91,166,.18);
-    line-height:1.9;
-}
+        /* แนะนำตัว */
+        .intro {
+            position: relative;
+            z-index: 1;
+            width: 85%;
+            max-width: 900px;
+            margin: 20px auto 40px;
+            padding: 30px;
+            background: rgba(255,255,255,0.75);
+            border: 3px solid #c79bea;
+            border-radius: 25px;
+            box-shadow: 0 8px 25px rgba(108,65,150,0.18);
+            text-align: center;
+        }
 
-.intro-title{
-    font:28px 'Itim';
-    color:#7b5291;
-}
+        .intro h2 {
+            color: #70409b;
+            margin-bottom: 15px;
+        }
 
-.intro-card b{
-    color:#704681;
-}
+        .intro p {
+            font-size: 18px;
+            line-height: 1.8;
+        }
 
-/* เมนู */
-.menu{
-    display:grid;
-    grid-template-columns:repeat(2,1fr);
-    gap:18px;
-    max-width:700px;
-    margin:25px auto;
-}
+        /* กล่องเมนู */
+        .menu {
+            position: relative;
+            z-index: 1;
+            width: 90%;
+            max-width: 1000px;
+            margin: auto;
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+            gap: 20px;
+        }
 
-.card{
-    text-decoration:none;
-    color:#6b4b7d;
-    padding:22px 18px;
-    border-radius:25px;
-    background:rgba(255,255,255,.58);
-    border:1.5px solid rgba(255,255,255,.85);
-    box-shadow:0 10px 28px rgba(120,80,150,.15);
-    transition:.3s;
-}
+        .card {
+            background: rgba(255,255,255,0.82);
+            border: 2px solid #c79bea;
+            border-radius: 22px;
+            padding: 28px 20px;
+            text-align: center;
+            text-decoration: none;
+            color: #5a337e;
+            box-shadow: 0 7px 18px rgba(100,60,140,0.15);
+            transition: 0.3s;
+        }
 
-.card:hover{
-    transform:translateY(-6px);
-}
+        .card:hover {
+            transform: translateY(-8px) scale(1.02);
+            background: #fff;
+            box-shadow: 0 12px 25px rgba(100,60,140,0.25);
+        }
 
-.card .icon{
-    font-size:32px;
-}
+        .card .icon {
+            font-size: 45px;
+            margin-bottom: 12px;
+        }
 
-.card h2{
-    font:23px 'Itim';
-    margin:5px;
-}
+        .card h3 {
+            margin-bottom: 8px;
+            color: #6c4196;
+        }
 
-.card p{
-    font-size:13px;
-}
+        .card p {
+            font-size: 14px;
+        }
 
-/* ติดต่อ */
-.contact{
-    max-width:700px;
-    margin:auto;
-    padding:20px;
-    border-radius:25px;
-    background:rgba(255,255,255,.55);
-    border:1.5px solid rgba(255,255,255,.85);
-    box-shadow:0 10px 28px rgba(120,80,150,.14);
-    line-height:1.9;
-}
+        /* ขอบคุณ */
+        .thanks {
+            text-align: center;
+            margin: 60px 0 30px;
+            color: #70409b;
+            font-size: 18px;
+        }
 
-.contact h2{
-    font:24px 'Itim';
-}
+        @media (max-width: 600px) {
+            .hero h1 {
+                font-size: 34px;
+            }
 
-.contact a{
-    color:#79518b;
-    text-decoration:none;
-}
-
-.thankyou{
-    padding:25px;
-    line-height:2;
-}
-
-.thankyou-title{
-    font:25px 'Itim';
-    color:#805490;
-}
-
-@media(max-width:600px){
-    .top-nav a{
-        font-size:11px;
-        padding:7px 9px;
-    }
-
-    .profile{
-        width:145px;
-        height:145px;
-    }
-
-    h1{
-        font-size:37px;
-    }
-
-    .menu{
-        grid-template-columns:1fr;
-    }
-}
-</style>
+            nav a {
+                padding: 8px 10px;
+                font-size: 13px;
+            }
+        }
+    </style>
 </head>
 
 <body>
 
-<!-- แถบเมนู -->
-<nav class="top-nav">
-    <a href="index.html">⌂ หน้าแรก</a>
-    <a href="portfolio.html">📖 คำนำ</a>
-    <a href="education.html">🎓 ประวัติการศึกษา</a>
-    <a href="future.html">🏫 อยากเข้าศึกษาต่อ</a>
-    <a href="proud.html">🏆 ผลงานที่ภูมิใจ</a>
-</nav>
+    <!-- ดาวตกแต่ง -->
+    <div class="star s1">✦</div>
+    <div class="star s2">✧</div>
+    <div class="star s3">✦</div>
+    <div class="star s4">✧</div>
 
-<main class="container">
+    <!-- แท็บด้านบน -->
+    <nav>
+        <a href="index.html">หน้าหลัก</a>
+        <a href="introduction.html">คำนำ</a>
+        <a href="about.html">แนะนำตัว</a>
+        <a href="education.html">ประวัติการศึกษา</a>
+        <a href="university.html">มหาวิทยาลัยที่อยากเข้า</a>
+        <a href="works.html">ผลงาน</a>
+        <a href="skills.html">ความสามารถพิเศษ</a>
+        <a href="contact.html">ช่องทางการติดต่อ</a>
+    </nav>
 
-    <div class="profile">
-        <img src="profile.jpg" alt="Naweeya Dangniem">
-    </div>
+    <!-- ส่วนหัว -->
+    <section class="hero">
+        <div class="castle">🏰</div>
 
-    <h1>Naweeya Dangniem</h1>
+        <h1>Naweeya Dangniem</h1>
 
-    <div class="portfolio-title">
-        ✦ Portfolio ✦
-    </div>
+        <h2>Portfolio</h2>
+    </section>
 
-    <div class="subtitle">
-        นักเรียนชั้นมัธยมศึกษาปีที่ 6
-    </div>
-
-    <div class="intro-card">
-
-        <div class="intro-title">
-            ✦ แนะนำตัว ✦
-        </div>
+    <!-- แนะนำตัว -->
+    <section class="intro">
+        <h2>✨ แนะนำตัว ✨</h2>
 
         <p>
-            สวัสดีค่ะ หนูชื่อ <b>น.ส.นวียา แดงเนียม</b><br>
-            ชื่อเล่น <b>เหนือ</b> ♡
+            สวัสดีค่ะ หนูชื่อ <b>นวียา แดงเนียม</b><br>
+            ชื่อเล่น <b>เหนือ</b><br>
+            นักเรียนชั้นมัธยมศึกษาปีที่ 6
         </p>
 
         <p>
-           อายุ 17 ปี ปัจจุบันกำลังศึกษาอยู่ชั้นมัธยมศึกษาปีที่ 6
-            โรงเรียนบ้านบึงอุตสาหกรรมนุเคราะห์
+            แฟ้มสะสมผลงานเล่มนี้จัดทำขึ้นเพื่อรวบรวม
+            ประวัติการศึกษา ผลงาน ความสามารถ
+            และความสนใจของหนู
         </p>
+    </section>
 
-    </div>
-
+    <!-- เมนู -->
     <section class="menu">
 
-        <a class="card" href="portfolio.html">
+        <a href="introduction.html" class="card">
             <div class="icon">📖</div>
-            <h2>คำนำ</h2>
-            <p>ความตั้งใจและเป้าหมายในการจัดทำ Portfolio</p>
+            <h3>คำนำ</h3>
+            <p>ที่มาและจุดประสงค์ของแฟ้มสะสมผลงาน</p>
         </a>
 
-        <a class="card" href="education.html">
+        <a href="about.html" class="card">
+            <div class="icon">👩🏻‍💻</div>
+            <h3>แนะนำตัว</h3>
+            <p>ข้อมูลและเรื่องราวเกี่ยวกับตัวฉัน</p>
+        </a>
+
+        <a href="education.html" class="card">
             <div class="icon">🎓</div>
-            <h2>ประวัติการศึกษา</h2>
-            <p>เส้นทางการเรียนรู้และการศึกษา</p>
+            <h3>ประวัติการศึกษา</h3>
+            <p>ข้อมูลการศึกษาและประสบการณ์ในโรงเรียน</p>
         </a>
 
-        <a class="card" href="future.html">
+        <a href="university.html" class="card">
             <div class="icon">🏫</div>
-            <h2>อยากเข้าศึกษาต่อ</h2>
-            <p>มหาวิทยาลัยและสาขาที่ใฝ่ฝัน</p>
+            <h3>มหาวิทยาลัยที่อยากเข้า</h3>
+            <p>คณะและมหาวิทยาลัยที่สนใจ</p>
         </a>
 
-        <a class="card" href="proud.html">
+        <a href="works.html" class="card">
             <div class="icon">🏆</div>
-            <h2>ผลงานที่ภูมิใจ</h2>
-            <p>ผลงาน กิจกรรม และประสบการณ์ที่ภาคภูมิใจ</p>
+            <h3>ผลงานที่ภูมิใจ</h3>
+            <p>ผลงานและกิจกรรมที่เคยทำ</p>
+        </a>
+
+        <a href="skills.html" class="card">
+            <div class="icon">💻</div>
+            <h3>ความสามารถพิเศษ</h3>
+            <p>ทักษะด้านการเขียนโค้ดและการใช้โปรแกรมคอมพิวเตอร์</p>
+        </a>
+
+        <a href="projects.html" class="card">
+            <div class="icon">🛠️</div>
+            <h3>โครงงาน / ชิ้นงาน</h3>
+            <p>โครงงานและชิ้นงานที่เคยจัดทำ</p>
+        </a>
+
+        <a href="contact.html" class="card">
+            <div class="icon">💌</div>
+            <h3>ช่องทางการติดต่อ</h3>
+            <p>ช่องทางสำหรับติดต่อและติดตาม</p>
         </a>
 
     </section>
 
-    <section class="contact">
-
-        <h2>✦ ติดต่อ ✦</h2>
-
-        <p>
-            📧
-            <a href="mailto:naweeya3425@gmail.com">
-                naweeya3425@gmail.com
-            </a>
-        </p>
-
-        <p>
-            📱
-            <a href="tel:0623023425">
-                062-302-3425
-            </a>
-        </p>
-
-        <p>
-            📷 Instagram :
-            <a href="https://www.instagram.com/lisnnuea">
-                @lisnnuea
-            </a>
-        </p>
-
-    </section>
-
-    <div class="thankyou">
-
-        <div class="thankyou-title">
-            ✦ ขอบคุณ ✦
-        </div>
-
-        ขอบคุณที่เข้ามาเยี่ยมชมแฟ้มสะสมผลงานของหนู<br>
-        ขอให้ทุกความฝันของเราค่อย ๆ เติบโตไปด้วยกัน<br>
-        ♡ นวียา แดงเนียม ♡
-
+    <div class="thanks">
+        ขอบคุณ 💜
     </div>
-
-</main>
 
 </body>
 </html>
